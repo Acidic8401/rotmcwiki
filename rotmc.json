@@ -1,0 +1,144 @@
+{
+    "classes":{
+        "warrior":{
+            "weapon":"Sword",
+            "armour":"Heavy",
+            "type":"Melee",
+            "stats":{
+                "atk": 30,
+                "spd":20,
+                "bhp": 24,
+                "health":25,
+                "eva":15,
+                "vit":30,
+                "defence":25
+            },
+            "tn":"https://via.placeholder.com/140x100"
+        },
+        "knight":{
+            "weapon":"Sword",
+            "armour":"Heavy",
+            "type":"Melee",
+            "stats":{
+                "atk": 25,
+                "spd":15,
+                "bhp": 24,
+                "health":35,
+                "eva":10,
+                "vit":35,
+                "defence":30
+            },
+            "tn":"https://via.placeholder.com/140x100"
+        },
+        "huntress":{
+            "weapon":"Bow",
+            "armour":"Leather",
+            "type":"Ranged",
+            "stats":{
+                "atk": 35,
+                "spd":30,
+                "bhp": 20,
+                "health":20,
+                "eva":20,
+                "vit":25,
+                "defence":25
+            },
+            "tn":"https://via.placeholder.com/140x100"
+        },
+        "rogue":{
+            "weapon":"Dagger",
+            "armour":"Leather",
+            "type":"Midrange",
+            "stats":{
+                "atk": 35,
+                "spd":35,
+                "bhp": 20,
+                "health":20,
+                "eva":35,
+                "vit":20,
+                "defence":20
+            },
+            "tn":"https://via.placeholder.com/140x100"
+        },
+        "assassin":{
+            "weapon":"Dagger",
+            "armour":"Leather",
+            "type":"Midrange",
+            "stats":{
+                "atk": 20,
+                "spd":35,
+                "bhp": 20,
+                "health":20,
+                "eva":25,
+                "vit":25,
+                "defence":15
+            },
+            "tn":"https://via.placeholder.com/140x100"
+        },
+        "necro":{
+            "weapon":"Staff",
+            "armour":"Robe",
+            "type":"Longrange",
+            "stats":{
+                "atk": 40,
+                "spd":20,
+                "bhp": 18,
+                "health":20,
+                "eva":25,
+                "vit":20,
+                "defence":20
+            },
+            "tn":"https://via.placeholder.com/140x100"
+        },
+        "battlemage":{
+            "weapon":"Sword",
+            "armour":"Robe",
+            "type":"Melee",
+            "stats":{
+                "atk": 45,
+                "spd":25,
+                "bhp": 18,
+                "health":20,
+                "eva":20,
+                "vit":40,
+                "defence":20
+            },
+            "tn":"https://via.placeholder.com/140x100"
+        }
+    },
+    "dungs":{
+        "abyss":{
+            "drops":{
+                "gear":"Tier 4-7 Weapons and Armours",
+                "abilities":"Tier 2-3 Abilities",
+                "gems":"Level 1-3 Gems",
+                "pots":["Defense Pots"],
+                "whites":["Demonic Blade <:dblade:745459928558469150>"]
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812069319630258216/abysskey.png",
+            "whiteurl":"https://cdn.discordapp.com/attachments/798557625482084434/812095381559050240/wt12.png"
+        },
+        "udl":{
+            "drops":{
+                "gear":"Tier 4-7 Weapons and Armours",
+                "abilities":"Tier 2-3 Abilities",
+                "gems":"Level 1-3 Gems",
+                "pots":["Attack Pots"],
+                "whites":["Doom Bow <:dbow:745458627707666552>"]
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812098821856165898/udlkey.png",
+            "whiteurl":"https://cdn.discordapp.com/attachments/798557625482084434/812099003830239242/bt11.png"
+        },
+        "davy":{
+            "drops":{
+                "gear":"Tier 4-8 Weapons and Armours",
+                "abilities":"Tier 2-4 Abilities",
+                "gems":"Level 1-4 Gems",
+                "pots":["Attack Pots"],
+                "whites":["Spectral Cloth Armour <:sarmour:812108219941388308>" , "Spirit Dagger <:sdagger:745460386853027841>", "Ghost King's Cutlass <:cutlass:745459906542305361>"]
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812101179378630667/davykey.png",
+            "whiteurl":"https://cdn.discordapp.com/attachments/798557625482084434/812101224387706880/wt11.png"
+        }
+    }
+}
