@@ -13,7 +13,7 @@
                 "vit":30,
                 "defence":25
             },
-            "tn":"https://via.placeholder.com/140x100"
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812399738396868628/pack.png"
         },
         "knight":{
             "weapon":"Sword",
@@ -28,7 +28,7 @@
                 "vit":35,
                 "defence":30
             },
-            "tn":"https://via.placeholder.com/140x100"
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812399738396868628/pack.png"
         },
         "huntress":{
             "weapon":"Bow",
@@ -43,7 +43,7 @@
                 "vit":25,
                 "defence":25
             },
-            "tn":"https://via.placeholder.com/140x100"
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812399738396868628/pack.png"
         },
         "rogue":{
             "weapon":"Dagger",
@@ -58,7 +58,7 @@
                 "vit":20,
                 "defence":20
             },
-            "tn":"https://via.placeholder.com/140x100"
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812399738396868628/pack.png"
         },
         "assassin":{
             "weapon":"Dagger",
@@ -73,7 +73,7 @@
                 "vit":25,
                 "defence":15
             },
-            "tn":"https://via.placeholder.com/140x100"
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812399738396868628/pack.png"
         },
         "necro":{
             "weapon":"Staff",
@@ -88,7 +88,7 @@
                 "vit":20,
                 "defence":20
             },
-            "tn":"https://via.placeholder.com/140x100"
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812399738396868628/pack.png"
         },
         "battlemage":{
             "weapon":"Sword",
@@ -103,7 +103,7 @@
                 "vit":40,
                 "defence":20
             },
-            "tn":"https://via.placeholder.com/140x100"
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812399738396868628/pack.png"
         }
     },
     "dungs":{
@@ -113,10 +113,11 @@
                 "abilities":"Tier 2-3 Abilities",
                 "gems":"Level 1-3 Gems",
                 "pots":["Defense Pots"],
-                "whites":["Demonic Blade <:dblade:745459928558469150>"]
+                "whites":["Demonic Blade <:dblade:745459928558469150>"],
+                "runes":"False"
             },
             "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812069319630258216/abysskey.png",
-            "whiteurl":"https://cdn.discordapp.com/attachments/798557625482084434/812095381559050240/wt12.png"
+            "droploc":["Dark Demon", "Light Demon", "Common Crate"]
         },
         "udl":{
             "drops":{
@@ -124,10 +125,11 @@
                 "abilities":"Tier 2-3 Abilities",
                 "gems":"Level 1-3 Gems",
                 "pots":["Attack Pots"],
-                "whites":["Doom Bow <:dbow:745458627707666552>"]
+                "whites":["Doom Bow <:dbow:745458627707666552>"],
+                "runes":"False"
             },
             "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812098821856165898/udlkey.png",
-            "whiteurl":"https://cdn.discordapp.com/attachments/798557625482084434/812099003830239242/bt11.png"
+            "droploc":["Ghost God", "Common Crate", "Uncommon Crate"]
         },
         "davy":{
             "drops":{
@@ -135,10 +137,205 @@
                 "abilities":"Tier 2-4 Abilities",
                 "gems":"Level 1-4 Gems",
                 "pots":["Attack Pots"],
-                "whites":["Spectral Cloth Armour <:sarmour:812108219941388308>" , "Spirit Dagger <:sdagger:745460386853027841>", "Ghost King's Cutlass <:cutlass:745459906542305361>"]
+                "whites":["Spectral Cloth Armour <:sarmour:812108219941388308>" , "Spirit Dagger <:sdagger:745460386853027841>", "Ghost King's Cutlass <:cutlass:745459906542305361>"],
+                "runes":"False"
             },
             "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812101179378630667/davykey.png",
-            "whiteurl":"https://cdn.discordapp.com/attachments/798557625482084434/812101224387706880/wt11.png"
+            "droploc":["Hermit Master", "Common Crate", "Uncommon Crate"]
+        },
+        "tcave":{
+            "drops":{
+                "gear":"Tier 4-8 Weapons and Armours",
+                "abilities":"Tier 2-4 Abilities",
+                "gems":"Level 1-4 Gems",
+                "pots":["Vitality Pots"],
+                "whites":["Lightning Boots <:lboots:812703556246831124>"],
+                "runes":"False"
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812703932631613440/cavekey.png",
+            "droploc":["Zombified Caster", "Rare Crate"]
+        },
+        "kraken":{
+            "drops":{
+                "gear":"Tier 4-9 Weapons and Armours",
+                "abilities":"Tier 2-5 Abilities",
+                "gems":"Level 1-5 Gems",
+                "pots":["Attack Pots", "Defense Pots", "Speed Pots"],
+                "whites":["Bow of Corals <:cbow:745465747207225374>", "Mask Of Shaitan <:smask:812352959420956704>", "Shaitan's Skull <:sskull:745465353471262731>", "Plague Poison <:ppoison:745466043975335997>"],
+                "runes":"True"
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812353588197720064/krakenkey.png",
+            "droploc":["Elemental Servant", "Rare Crate"]
+        },
+        "fung":{
+            "drops":{
+                "gear":"Tier 4-9 Weapons and Armours",
+                "abilities":"Tier 2-5 Abilities",
+                "gems":"Level 1-5 Gems",
+                "pots":["Evasion Pots"],
+                "whites":["Crystal Trap <:ctrap:745466133498560593>", "Crystal Shield <:cshield:745465246520705044>"],
+                "runes":"True"
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812356842671308810/fungalkey.png",
+            "dropsloc":["Crystal Worm Father", "Epic Crate"]
+        },
+        "cult":{
+            "drops":{
+                "gear":"Tier 4-9 Weapons and Armours",
+                "abilities":"Tier 2-5 Abilities",
+                "gems":"Level 1-5 Gems",
+                "pots":["Evasion Pots"],
+                "whites":["Hood of the Cultist <:chood:812359274403594281>", "Staff of Unholy Sacrifice <:cstaff:745465930313760928>"],
+                "runes":"True"
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812359715174481950/cultistkey.png",
+            "droploc":["Forgotten Sentry","Epic Crate"]
+        },
+        "golem":{
+            "drops":{
+                "gear":"Tier 6-10 Weapons and Armours",
+                "abilities":"Tier 2-5 Abilities",
+                "gems":"Level 1-5 Gems",
+                "pots":["Health Pots"],
+                "whites":["Gravedigger's Shovel <:gshovel:745465929848193085>", "Breastplate of New Life <:bplate:812360731625521173>", "Void Hat <:vhat:812360946068226090>"],
+                "runes":"True"
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812361147361394758/golemkey.png",
+            "droploc":["Forgotten Sentry", "Legendary Crate"]
+        },
+        "shatters":{
+            "drops":{
+                "gear":"Tier 6-10 Weapons and Armours",
+                "abilities":"Tier 2-5 Abilities",
+                "gems":"Level 1-5 Gems",
+                "pots":["Vitality Pots", "Evasion Pots", "Health Pots"],
+                "whites":["Sentinel's Visor <:svisor:812399013130141726>", "Twilight Hood <:thood:812399053455097867>", "Forgotten Crown <:crown:812398968892948491>"],
+                "runes":"True"
+            },
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812399580368994304/shatterskey.png",
+            "droploc":["Avatar of the Forgotten King", "Legendary Crate"]
+        }
+    },
+    "items":{
+        "crown":{
+            "slot":"Head",
+            "classes":["Knight", "Warrior"],
+            "displayname":"The Forgotten Crown",
+            "levelreq":"20",
+            "dropsfrom":"The Forgotten King",
+            "stats":["+20% Defense", "+25% Attack"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"False",
+            "tn":"https://cdn.discordapp.com/emojis/812398968892948491.png?v=1"
+        },
+        "thood":{
+            "slot":"Head",
+            "classes":["Necromancer", "Battlemage"],
+            "displayname":"Twilight Hood",
+            "levelreq":"20",
+            "dropsfrom":"Twilight Archmage",
+            "stats":["+6% Defense", "+20% Attack", "+10% Speed"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"False",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812725637227610152/thood.png"
+        },
+        "svisor":{
+            "slot":"Head",
+            "classes":["Huntress", "Rogue", "Assassin"],
+            "displayname":"Sentinel's Visor",
+            "levelreq":"20",
+            "dropsfrom":"The Forgotten Sentinel",
+            "stats":["+16% Defense", "+12% Dodge", "+6 Health"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"False",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812727062469017671/svisor.png"
+        },
+        "vhat":{
+            "slot":"Head",
+            "classes":["Huntress", "Rogue", "Assassin"],
+            "displayname":"Void Hat",
+            "levelreq":"20",
+            "dropsfrom":"Void Golem",
+            "stats":["+30% Dodge", "+4 Health"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"False",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812730903624810526/vhat.png"
+        },
+        "sarmour":{
+            "slot":"Chest",
+            "classes":["Huntress", "Rogue", "Assassin"],
+            "displayname":"Spectral Cloth Armour",
+            "levelreq":"20",
+            "dropsfrom":"Dave Jones",
+            "stats":["+15% Defense", "+15% Speed", "+20% Attack"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"True",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812734321504550922/sarmour.png"
+        },
+        "cgreaves":{
+            "slot":"Leggings",
+            "classes":["Knight", "Warrior"],
+            "displayname":"Crayfish Greaves",
+            "levelreq":"20",
+            "dropsfrom":"Hermit Master",
+            "stats":["+42% Defense", "-5% Speed"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"False",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812735391525371904/cgreaves.png"
+        },
+        "flegs":{
+            "slot":"Leggings",
+            "classes":["Necromancer", "Battlemage"],
+            "displayname":"Frost Leggings",
+            "levelreq":"20",
+            "dropsfrom":"Lotil",
+            "stats":["+32% Defense"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"False",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812768182246178826/flegs.png"
+        },
+        "crobe":{
+            "slot":"Chest",
+            "classes":["Necromancer", "Battlemage"],
+            "displayname":"Robe of Cronos",
+            "levelreq":"20",
+            "dropsfrom":"Slime God",
+            "stats":["+30% Attack"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"True",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812769866872258621/crobe.png"
+        },
+        "lboots":{
+            "slot":"Feet",
+            "classes":["Knight", "Warrior"],
+            "displayname":"Lightning Boots",
+            "levelreq":"20",
+            "dropsfrom":"Mysterious Effigy",
+            "stats":["+30% Speed", "+20% Dodge"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"False",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812770998067396638/lboots.png"
+        },
+        "ssandals":{
+            "slot":"Feet",
+            "classes":["Huntress", "Rogue", "Assassin"],
+            "displayname":"Spooky Sandals",
+            "levelreq":"20",
+            "dropsfrom":"Lost Sentry",
+            "stats":["+20% Defense", "-10% Speed", "+10% Attack", "+15% Dodge"],
+            "gem":"3",
+            "runes":"1",
+            "essence":"False",
+            "tn":"https://cdn.discordapp.com/attachments/798557625482084434/812882277243420672/ssandals.png"
         }
     }
 }
