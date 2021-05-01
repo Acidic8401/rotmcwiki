@@ -74,9 +74,9 @@ async def unload(ctx, extension):
 async def rload(ctx, extension):
     if ctx.author.id == 613793967871492131:
         client.unload_extension(f'cogs.{extension}')
-        print(f'{extension} has been unloaded')
+        await ctx.send(f'{extension} has been unloaded')
         client.load_extension(f'cogs.{extension}')
-        print(f'{extension} has been reloaded')
+        await ctx.send(f'{extension} has been reloaded')
 
 for filename in os.listdir(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\cogs'):
     if filename.endswith('py'):

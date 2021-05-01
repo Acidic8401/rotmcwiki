@@ -24,7 +24,7 @@ def dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droplocs):
     if runes:
         embed.add_field(
             name="**Drops**",
-            value=f"`Gear:` {gear} \n `Abilities:` {abilities} \n `Gems:` {gems} \n `Whites:` {whites}\n `Pots:` {pots} \n `Drop Locations:` {droplocs} \n `Pots:` {pots} \n`Other:` Runes"
+            value=f"`Gear:` {gear} \n `Abilities:` {abilities} \n `Gems:` {gems} \n `Whites:` {whites}\n `Pots:` {pots} \n `Drop Locations:` {droplocs} \n`Other:` Runes"
         )
     else:
         embed.add_field(
@@ -90,6 +90,47 @@ def abilities(dname, lreq, droploc, exalted, cd, ability, gem, tn, colour):
             description=f"`Display Name:` {dname} \n `Level Requirement:` {lreq} \n `Drop Location:` {droploc} \n `Cooldown:` {cd} \n `Ability:` {ability} \n `Gem Slots:` {gem}"
         )
 
+    embed.set_thumbnail(url=tn)
+    embed.color=int(colour)
+    return embed
+def tarmours(tpe, gem, lreq, stats, classes, tier, name, colour, tn):
+    if tier in ["9", "10", "11"]:
+        embed=discord.Embed(
+            title="**Armour info**",
+            description=f"`Armour Type:` {tpe} \n `Set Name:` {name} \n `Tier:` {tier} \n `Level Requirement:` {lreq} \n `Gem Sockets:` {gem} \n `Rune Sockets:` 1 \n `Classes:` {classes} \n `Stats:` {stats}"
+        )
+    elif tier in ["4", "3", "2", "1"]:
+        embed=discord.Embed(
+            title="**Armour info**",
+            description=f"`Armour Type:` {tpe} \n `Set Name:` {name} \n `Tier:` {tier} \n `Level Requirement:` {lreq} \n `Classes:` {classes} \n `Stats:` {stats}"
+        )
+    else:
+        embed=discord.Embed(
+            title="**Armour info**",
+            description=f"`Armour Type:` {tpe} \n `Set Name:` {name} \n `Tier:` {tier} \n `Level Requirement:` {lreq} \n `Gem Sockets:` {gem} \n `Classes:` {classes} \n `Stats:` {stats}"
+        )
+    embed.set_thumbnail(url=tn)
+    embed.color=int(colour)
+    return embed
+def tweapons(tpe, damage, rge, shots, velocity, pierces, cd, lreq, classes, name, gem, tier, colour, tn):
+    if tier in ["1", "2", "3", "4"]:
+        embed=discord.Embed(
+            title="**Weapon info**",
+            description=f"`Weapon Type:` {tpe} \n `Classes:` {classes} \n `Tier:` {tier} \n `Display Name:` {name} \n `Damage:` {damage} \n `Range:` {rge} \n `Shots:` {shots} \n `Velocity:` {velocity} \n `Pierces:` {pierces} \n `Cooldown:` {cd}"
+        )
+    else:
+        embed=discord.Embed(
+            title="**Weapon info**",
+            description=f"`Weapon Type:` {tpe} \n `Classes:` {classes} \n `Tier:` {tier} \n `Gem Sockets:` {gem} \n `Display Name:` {name} \n `Damage:` {damage} \n `Range:` {rge} \n `Shots:` {shots} \n `Velocity:` {velocity} \n `Pierces:` {pierces} \n `Cooldown:` {cd}"
+        )
+    embed.set_thumbnail(url=tn)
+    embed.color=int(colour)
+    return embed
+def elytras(defense, attack, speed, dodge, health, gem, name, colour, tn):
+    embed=discord.Embed(
+        title="**Elytra info**",
+        description=f"`Display Name:` {name} \n `Defense Bonus:` {defense} \n `Attack Bonus:` {attack} \n `Speed Bonus:` {speed} \n `Dodge Bonus:` {dodge} \n `Health Bonus:` {health} \n `Gem Sockets:` {gem} \n `Rune Sockets:` 1 \n `Essence Sockets:` 1"
+    )
     embed.set_thumbnail(url=tn)
     embed.color=int(colour)
     return embed
