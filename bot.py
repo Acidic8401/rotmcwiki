@@ -3,6 +3,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 import os 
 import json
+from webserver import keep_alive
 load_dotenv()
 token=os.getenv("TOKEN")
 
@@ -63,11 +64,12 @@ async def quit(ctx):
 async def load(ctx, extension):
     if ctx.author.id == 613793967871492131:
         client.load_extension(f'cogs.{extension}')
+        print(f'{extension} has been loaded')
 @client.command()
 @commands.is_owner()
 async def unload(ctx, extension):
     if ctx.author.id == 613793967871492131:
-        client.cdunload_extension(f'cogs.{extension}')
+        client.unload_extension(f'cogs.{extension}')
         print(f'{extension} has been unloaded')
 @client.command()
 @commands.is_owner()
@@ -78,8 +80,10 @@ async def rload(ctx, extension):
         client.load_extension(f'cogs.{extension}')
         await ctx.send(f'{extension} has been reloaded')
 
-for filename in os.listdir(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\cogs'):
-    if filename.endswith('py'):
-        client.load_extension(f'cogs.{filename[:-3]}')
 
+client.load_extension('cogs.core')
+client.load_extension('cogs.wiki')
+client.load_extension('cogs.error')
+
+keep_alive()
 client.run(token)

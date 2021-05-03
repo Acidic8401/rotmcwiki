@@ -6,15 +6,9 @@ class Core(commands.Cog):
         self.client=client
 
     @commands.command()
-    @commands.is_owner()
-    async def test(self, ctx, *, message):
-        await ctx.message.delete()
-        embed=discord.Embed(
-            title="Test",
-            description=f"{message}",
-            color=ctx.author.color
-        )
-        await ctx.send(embed=embed)
+    async def ping(self, ctx):
+        ping = round(self.client.latency * 1000)
+        await ctx.send(f'{ping}ms')
 
 
 

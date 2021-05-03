@@ -3,6 +3,7 @@ from discord.ext import commands
 import json
 import embeds
 import re
+from pygicord import Paginator
 
 class Wiki(commands.Cog):
     def __init__(self, client):
@@ -899,7 +900,7 @@ class Wiki(commands.Cog):
         elif terms in self.eckunai:
             terms="eckunai"
         if terms in ["warrior", "knight", "necro", "battlemage", "huntress", "assassin", "rogue", "ninja", "samurai"]:
-            with open(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\rotmc.json') as f:
+            with open(r'rotmc.json') as f:
                 f = json.load(f)
             data = f["classes"][terms]
             weapon=data["weapon"]
@@ -919,7 +920,7 @@ class Wiki(commands.Cog):
             em=embeds.char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, crithit, critdam, tn)
             await ctx.send(embed=em)
         elif terms in ["abyss", "udl", "davy", "tcave", "kraken", "fung", "cult", "golem", "shatters"]:
-            with open(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\rotmc.json') as f:
+            with open(r'rotmc.json') as f:
                 f = json.load(f)
             data=f["dungs"][terms]
             tn=data["tn"]
@@ -941,7 +942,7 @@ class Wiki(commands.Cog):
             em=embeds.dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droploc)
             await ctx.send(embed=em)
         elif terms in ["eochest", "eochaps", "ochest", "ochaps", "oboots","eoboots","eflegs", "fboots", "efboots", "ecrobe", "crown", "thood", "svisor", "vhat", "sarmour", "cgreaves", "crobe", "lboots", "ssandals", "smask", "chood", "bplate", "flegs", "mmask", "mchest", "mgreaves", "mboots", "ehat", "earmour", "echaps", "eboots", "cehood", "cerobe", "celegs", "ceboots", "ebplate", "llegs", "ellegs", "echood", "esmask", "essandals", "elboots", "ecgreaves", "esarmour", "evhat", "esvisor", "ethood", "ecrown"]:
-            with open(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\rotmc.json') as f:
+            with open(r'rotmc.json') as f:
                 f = json.load(f)
             data=f["items"][terms]
             slot = data["slot"]
@@ -961,7 +962,7 @@ class Wiki(commands.Cog):
             em=embeds.armours(ctx, slot, classes, displayname, levelreq, dropsfrom, stats, gems, runes, essence, tn, exalted, colour)
             await ctx.send(embed=em)
         elif terms in ["dbow", "edbow", "dkat", "edkat", "kendo", "ekendo", "okat", "eokat", "cbow", "ecbow", "lbow", "elbow", "bbow", "ebbow", "obow", "eobow", "sdagger", "esdagger", "cdirk", "ecdirk", "ddagger", "eddagger", "gdagger", "egdagger", "odagger", "eodagger", "shovel", "eshovel", "cultstaff", "ecultstaff", "crystalstaff", "ecrystalstaff", "asteroid", "easteroid", "ostaff", "eostaff", "cutlass", "ecutlass", "dblade", "edblade", "gsword", "egsword", "tcleaver", "etcleaver", "osword", "eosword"]:
-            with open(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\rotmc.json') as f:
+            with open(r'rotmc.json') as f:
                 f = json.load(f)
             data=f["items"][terms]
             dname=data["displayname"]
@@ -983,7 +984,7 @@ class Wiki(commands.Cog):
             em=embeds.weapons(ctx, dname, lreq, droploc, exalted, dmg, rge, shots, velocity, pierces, cd, tpe, classes, gem, tn, colour)
             await ctx.send(embed=em)
         elif terms in ["ot1", "ot2", "ot3", "ot4", "ot5", "conflict", "econflict", "sorb", "esorb", "ct1", "ct2", "ct3", "ct4", "ct5", "bcloak", "ebcloak", "ccloak", "eccloak", "het1", "het2", "het3", "het4", "het5", "jugg", "ejugg", "ehelm", "eehelm", "pt1", "pt2", "pt3", "pt4", "pt5", "ppoison", "eppoison", "cfang", "ecfang", "st1", "st2", "st3", "st4", "st5", "cshield", "ecshield", "ogmur", "eogmur", "skt1", "skt2", "skt3", "skt4", "skt5", "sskull", "esskull", "heart", "eheart", "tt1", "tt2", "tt3", "tt4", "tt5", "ctrap", "ectrap", "cotrap", "ecotrap", "stt1", "stt2", "stt3", "stt4", "stt5", "cstar", "ecstar", "estar", "eestar", "kt1", "kt2", "kt3", "kt4", "kt5", "fkunai", "efkunai", "ckunai", "eckunai"]:
-            with open(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\rotmc.json') as f:
+            with open(r'rotmc.json') as f:
                 f = json.load(f)
                 data=f["items"][terms]
                 dname=data["displayname"]
@@ -998,7 +999,7 @@ class Wiki(commands.Cog):
                 em=embeds.abilities(dname, lreq, droploc, exalted, cd, ability, gem, tn, colour)
                 await ctx.send(embed=em)
         elif terms in ["ht11", "ht10", "ht9", "ht8", "ht7", "ht6", "ht5", "ht4", "ht3", "ht2", "ht1", "lt11", "lt10", "lt9", "lt8", "lt7", "lt6", "lt5", "lt4", "lt3", "lt2", "lt1", "rt11", "rt10", "rt9", "rt8", "rt7", "rt6", "rt5", "rt4", "rt3", "rt2", "rt1"]:
-            with open(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\rotmc.json') as f:
+            with open(r'rotmc.json') as f:
                 f = json.load(f)
                 data=f["items"][terms]
                 tpe=data["type"]
@@ -1015,7 +1016,7 @@ class Wiki(commands.Cog):
                 em=embeds.tarmours(tpe, gem, lreq, stats, classes, tier, name, colour, tn)
                 await ctx.send(embed=em)
         elif terms in ["katt1", "katt2", "katt3", "katt4", "katt5", "katt6", "katt7", "katt8", "katt9", "katt10", "katt11", "bowt1", "bowt2", "bowt3", "bowt4", "bowt5", "bowt6", "bowt7", "bowt8", "bowt9", "bowt10", "bowt11", "daggert1", "daggert2", "daggert3", "daggert4", "daggert5", "daggert6", "daggert7", "daggert8", "daggert9", "daggert10", "daggert11", "stafft1", "stafft2", "stafft3", "stafft4", "stafft5", "stafft6", "stafft7", "stafft8", "stafft9", "stafft10", "stafft11", "swordt1", "swordt2", "swordt3", "swordt4", "swordt5", "swordt6", "swordt7", "swordt8", "swordt9", "swordt10", "swordt11"]:
-            with open(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\rotmc.json') as f:
+            with open(r'rotmc.json') as f:
                 f = json.load(f)
                 data=f["items"][terms]
                 tpe=data["type"]
@@ -1036,7 +1037,7 @@ class Wiki(commands.Cog):
                 em=embeds.tweapons(tpe, damage, rge, shots, velocity, pierces, cd, lreq, classes, name, gem, tier, colour, tn)
                 await ctx.send(embed=em)
         elif terms in ["belytra", "selytra", "gelytra", "pelytra", "delytra", "oelytra", "brelytra"]:
-            with open(r'C:\Users\Bailey\Documents\Programs\rotmc\rotmcwiki\rotmc.json') as f:
+            with open(r'rotmc.json') as f:
                 f = json.load(f)
                 data=f["items"][terms]
                 name=data["name"]
@@ -1050,10 +1051,124 @@ class Wiki(commands.Cog):
                 tn=data["tn"]
                 em=embeds.elytras(defense, attack, speed, dodge, health, gem, name, colour, tn)
                 await ctx.send(embed=em)
+        elif terms == "gems":
+            paginator = Paginator(pages=self.get_pages())
+            await paginator.start(ctx)
         else:
             await ctx.send(f"couldn't find {terms} in the database, please try again")
 
-        
+    def get_pages(self):
+        pages = []
+        #Index
+        embed=discord.Embed(
+            title="**Gem Index Page**"
+        )
+        embed.add_field(
+            name="**Controls**",
+            value="`Skip To A Page:` :1234: \n `Forward One:` :arrow_forward: \n `Backword One:` :arrow_backward: \n `Skip To End:` :track_next: \n `Go Back Here:` :track_previous: \n `Quit:` :stop_button:"
+        )
+        embed.add_field(
+            name="**Index**",
+            value="`Vitality Gems:` Page 2 \n `Speed Gems:` Page 3 \n `Evasion Gems:` Page 4 \n `Attack Gems:` Page 5 \n `Defense Gems:` Page 6 \n `Health Gems:` Page 7 \n `CritHit Gems:` Page 8 \n `CritDamage Gems:` Page 9"
+        )
+        embed.add_field(
+            name="**Drop Locations**",
+            value="`Tier 1 Gems:` Tutorial/Early Quests \n `Tier 2 Gems:` Purple Bags \n `Tier 3 Gems:` Blue Bags \n `Tier 4 Gems:` Blue Bags \n `Tier 5 Gems:` Blue Bags"
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        #Vit Gems
+        embed=discord.Embed(
+            title="**Topaz of Vitality**",
+            description="""
+            <:vitalityt1:838121456730505257> Topaz of Vitality I: `+0.01 HP/s`
+                    <:vitalityt2:838121456831037461> Topaz of Vitality II: `+0.02 HP/s`
+                    <:vitalityt3:838121456642424853> Topaz of Vitality III: `+0.03 HP/s`
+                    <:vitalityt4:838121456709402714> Topaz of Vitality IV: `+0.04 HP/s`
+                    <:vitalityt5:838121456314351678> Topaz of Vitality V: `+0.05 HP/s`"""
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        #Speed Gems
+        embed=discord.Embed(
+            title="**Emerald of Speed**",
+            description="""
+            <:speedt1:838121339352645643> Emerald of Speed I: `+0.5% Speed`
+                     <:speedt2:838121339490402334> Emerald of Speed II: `+1% Speed`
+                     <:speedt3:838121339533000754> Emerald of Speed III: `+1.5% Speed`
+                     <:speedt4:838121339536539729> Emerald of Speed IV: `+2% Speed`
+                     <:speedt5:838121339633139742> Emerald of Speed V: `+2.5% Speed`"""
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        #Evasion Gems
+        embed=discord.Embed(
+            title="**Crystal of Evasion**",
+            description="""<:evasiont1:838121191775535124> Crystal of Evasion I: `+0.5% Evasion`
+                           <:evasiont2:838121191780384848> Crystal of Evasion II: `+1% Evasion`
+                           <:evasiont3:838121191780253706> Crystal of Evasion III: `+1.5% Evasion`
+                           <:evasiont4:838121191876984942> Crystal of Evasion IV: `+2% Evasion`
+                           <:evasiont5:838121191784579072> Crystal of Evasion V: `+2.5% Evasion`"""
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        #Attack Gems
+        embed=discord.Embed(
+            title="**Diamond of Attack**",
+            description="""<:attackt1:838120894332665856> Diamond of Attack I: `+0.5% Attack`
+                    <:attackt2:838120894320738324> Diamond of Attack II: `+1% Attack`
+                    <:attackt3:838120894538579978> Diamond of Attack III: `+1.5% Attack`
+                    <:attackt4:838120893925949481> Diamond of Attack IV: `+2% Attack`
+                    <:attackt5:838120894076813313> Diamond of Attack V: `+2.5% Attack`"""
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        #Defense Gems
+        embed=discord.Embed(
+            title="**Sapphire of Defense**",
+            description="""<:defenset1:838121072838049832> Sapphire of Defense I: `+0.5% Defense`
+                    <:defenset2:838121073001103360> Sapphire of Defense II: `+1% Defense`
+                    <:defenset3:838121072469213185> Sapphire of Defense III: `+1.5% Defense`
+                    <:defenset4:838121073056677908> Sapphire of Defense IV: `+2% Defense`
+                    <:defenset5:838121072909221898> Sapphire of Defense V: `+2.5% Defense`"""
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        #Health Gems
+        embed=discord.Embed(
+            title="**Ruby of Health**",
+            description="""<:lifet1:838388315500838973> Ruby of Health I: `+0.5 Health`
+                    <:lifet2:838388333633732648> Ruby of Health II: `+1 Health`
+                    <:lifet3:838388347222491196> Ruby of Health III: `+1.5 Health`
+                    <:lifet4:838388359326859338> Ruby of Health IV: `+2 Health`
+                    <:lifet5:838388370514116638> Ruby of Health V: `+2.5 Health`"""
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        #CritHit Gems
+        embed=discord.Embed(
+            title="**Amethyst of CritHit**",
+            description="""<:crithitt1:838120999215169577> Amethyst of CritHit I: `+0.5% CritHit`
+                    <:crithitt2:838120999429341185> Amethyst of CritHit II: `+1% CritHit`
+                    <:crithitt3:838120999395917865> Amethyst of CritHit III: `+1.5% CritHit`
+                    <:crithitt4:838120999340736549> Amethyst of CritHit IV: `+2% CritHit`
+                    <:crithitt5:838120998926155818> Amethyst of CritHit V: `+2.5% CritHit`"""
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        #CritDamage Gems
+        embed=discord.Embed(
+            title="**Almandine of CritDamage**",
+            description="""<:critdamaget1:838120998997196801> Almandine of CritDamage I: `+0.5% CritDamage`
+                    <:critdamaget2:838120999312031794> Almandine of CritDamage II: `+1% CritDamage`
+                    <:critdamaget3:838120999001260084> Almandine of CritDamage III: `+1.5% CritDamage`
+                    <:critdamaget4:838120999333265428> Almandine of CritDamage IV: `+2% CritDamage`
+                    <:critdamaget5:838120999413219348> Almandine of CritDamage V: `+2.5% CritDamage`"""
+        )
+        embed.color=discord.Color.random()
+        pages.append(embed)
+        return pages
+    
 
 def setup(client):
     client.add_cog(Wiki(client))
