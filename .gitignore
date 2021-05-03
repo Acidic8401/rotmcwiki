@@ -5,3 +5,5 @@ __pycache__/embeds.cpython-37.pyc
 cogs/__pycache__/wiki.cpython-37.pyc
 .env
 *.pyc
+package-lock.json
+
