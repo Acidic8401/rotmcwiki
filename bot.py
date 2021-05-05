@@ -1,9 +1,16 @@
-import discord
-from discord.ext import commands
+import subprocess
+import sys
+try:
+    import discord
+except:
+    subprocess.check_call([sys.executable, "pip", "install", "-r", "requirements.txt"])
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
 import os 
 import json
 from webserver import keep_alive
+from itertools import cycle
+import datetime
 load_dotenv()
 token=os.getenv("TOKEN")
 
@@ -15,10 +22,17 @@ def get_prefix(client, message):
 
 client=commands.Bot(command_prefix=get_prefix)
 client.remove_command("help")
+status=cycle(['RotMC', 'Do ;wiki <itemname>'])
 
 @client.event
 async def on_ready():
+    change_status.start()
+    client.start_time=datetime.datetime.utcnow()
     print('Bot is ready')
+
+@tasks.loop(seconds=300)
+async def change_status():
+    await client.change_presence(activity=discord.Game(next(status)))
 
 @client.event
 async def on_guild_join(guild):
@@ -84,6 +98,7 @@ async def rload(ctx, extension):
 client.load_extension('cogs.core')
 client.load_extension('cogs.wiki')
 client.load_extension('cogs.error')
+client.load_extension('cogs.admin')
 
 keep_alive()
 client.run(token)

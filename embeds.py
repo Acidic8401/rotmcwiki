@@ -16,7 +16,7 @@ def char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, cr
     )
     embed.set_thumbnail(url=tn)
     return embed
-def dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droplocs):
+def dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droplocs, colour, treq):
     embed=discord.Embed(
         title="**Dungeon info**",
         color=ctx.author.color
@@ -24,13 +24,15 @@ def dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droplocs):
     if runes:
         embed.add_field(
             name="**Drops**",
-            value=f"`Gear:` {gear} \n `Abilities:` {abilities} \n `Gems:` {gems} \n `Whites:` {whites}\n `Pots:` {pots} \n `Drop Locations:` {droplocs} \n`Other:` Runes"
+            value=f"`Gear:` {gear} \n `Abilities:` {abilities} \n `Gems:` {gems} \n `Whites:` {whites}\n `Pots:` {pots} \n `Drop Locations:` {droplocs} \n `Tier Points:` {treq} \n `Other:` Runes"
         )
     else:
         embed.add_field(
             name="**Drops**",
-            value=f"`Gear:` {gear} \n `Abilities:` {abilities} \n `Gems:` {gems} \n `Whites:` {whites}\n `Drop Locations:` {droplocs} \n `Pots:` {pots}"
+            value=f"`Gear:` {gear} \n `Abilities:` {abilities} \n `Gems:` {gems} \n `Whites:` {whites}\n `Drop Locations:` {droplocs} \n `Pots:` {pots} \n `Tier Points:` {treq}"
         )
+
+    embed.color=int(colour)
     embed.set_thumbnail(url=tn)
     embed.set_footer(text="For more information do ;info <itemname>")
     return embed
@@ -134,3 +136,8 @@ def elytras(defense, attack, speed, dodge, health, gem, name, colour, tn):
     embed.set_thumbnail(url=tn)
     embed.color=int(colour)
     return embed
+def dust():
+    embed=discord.Embed(
+        title="**Dust info**",
+        description = "Dust is used to make the success rate of gems. There are 5 different kinds of dust."
+    )

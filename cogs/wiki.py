@@ -19,8 +19,12 @@ class Wiki(commands.Cog):
         self.ninja=["ninja"]
         self.samurai=["sam", "samurai", "samu"]
         #Dungs
+        self.pcove=["pcove", "piratecove", "pcave", "piratecove", "cove"]
+        self.glair=["glair", "goblinlair", "goblinl"]
+        self.eforest=["eforest", "enchantedforest", "forest"]
         self.abyss=["abby", "abyss", "aod", "abyssofdemons", "aby"]
         self.udl=["lair", "udl", "undeadlair"]
+        self.chronos=["chronos", "cronos"]
         self.davy=["davy", "davies", "davyjoneslocker"]
         self.tcave=["tcave", "cave", "caveofathousandtreasures"]
         self.kraken=["krak", "kraken", "krakensfortress"]
@@ -28,6 +32,7 @@ class Wiki(commands.Cog):
         self.cult=["cult", "cultist", "cultisthideout"]
         self.golem=["golem", "void", "voidgolem"]
         self.shatts=["shatters", "shatts", "theshatters"]
+        self.onyx=["onyx", "onyxscastle", "castle", "oryx"]
         #UT Armours
         self.crown=["theforgottencrown", "crown"]
         self.thood=["thood", "twih", "twilighthood"]
@@ -311,6 +316,8 @@ class Wiki(commands.Cog):
         self.efkunai=["efkunai", "efrozenkunai"]
         self.ckunai=["ckunai", "crystallizedkunai"]
         self.eckunai=["ckunai", "ecrystallizedkunai"]
+        #Misc
+        self.gems=["gems", "gem"]
         print('Wiki intisialised')
 
     @commands.command(aliases=["wiki"])
@@ -339,6 +346,14 @@ class Wiki(commands.Cog):
         elif terms in self.samurai:
             terms = "samurai"
         #Dungeons
+        elif terms in self.pcove:
+            terms="pcove"
+        elif terms in self.glair:
+            terms="glair"
+        elif terms in self.eforest:
+            terms="eforest"
+        elif terms in self.chronos:
+            terms="chronos"
         elif terms in self.abyss:
             terms="abyss"
         elif terms in self.udl:
@@ -355,6 +370,8 @@ class Wiki(commands.Cog):
             terms="golem"
         elif terms in self.shatts:
             terms="shatters"
+        elif terms in self.onyx:
+            terms="onyx"
         #Armours
         elif terms in self.crown:
             terms="crown"
@@ -899,6 +916,9 @@ class Wiki(commands.Cog):
             terms="ckunai"
         elif terms in self.eckunai:
             terms="eckunai"
+        #Misc
+        elif terms in self.gems:
+            terms="gems"
         if terms in ["warrior", "knight", "necro", "battlemage", "huntress", "assassin", "rogue", "ninja", "samurai"]:
             with open(r'rotmc.json') as f:
                 f = json.load(f)
@@ -919,7 +939,7 @@ class Wiki(commands.Cog):
             tn=data["tn"]
             em=embeds.char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, crithit, critdam, tn)
             await ctx.send(embed=em)
-        elif terms in ["abyss", "udl", "davy", "tcave", "kraken", "fung", "cult", "golem", "shatters"]:
+        elif terms in ["pcove", "glair", "eforest", "abyss", "udl", "davy", "tcave", "kraken", "fung", "cult", "golem", "shatters", "chronos", "onyx"]:
             with open(r'rotmc.json') as f:
                 f = json.load(f)
             data=f["dungs"][terms]
@@ -936,10 +956,11 @@ class Wiki(commands.Cog):
             abilities=drops["abilities"]
             whites=drops["whites"]
             whites=', '.join(whites)
-            print('getting embed')
             droploc=data["droploc"]
             droploc=', '.join(droploc)
-            em=embeds.dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droploc)
+            colour=data["colour"]
+            treq=data["treq"]
+            em=embeds.dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droploc, colour, treq)
             await ctx.send(embed=em)
         elif terms in ["eochest", "eochaps", "ochest", "ochaps", "oboots","eoboots","eflegs", "fboots", "efboots", "ecrobe", "crown", "thood", "svisor", "vhat", "sarmour", "cgreaves", "crobe", "lboots", "ssandals", "smask", "chood", "bplate", "flegs", "mmask", "mchest", "mgreaves", "mboots", "ehat", "earmour", "echaps", "eboots", "cehood", "cerobe", "celegs", "ceboots", "ebplate", "llegs", "ellegs", "echood", "esmask", "essandals", "elboots", "ecgreaves", "esarmour", "evhat", "esvisor", "ethood", "ecrown"]:
             with open(r'rotmc.json') as f:

@@ -6,8 +6,8 @@ app = Flask('')
 
 
 @app.route('/')
-def source():
-    return "Webserver OK, Discord Bot OK"
+def index():
+    return render_template('index.html')
 
 def run():
   app.run(host='0.0.0.0',port=8080)
