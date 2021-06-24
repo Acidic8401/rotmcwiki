@@ -26,13 +26,14 @@ class Wiki(commands.Cog):
         self.udl=["lair", "udl", "undeadlair"]
         self.chronos=["chronos", "cronos"]
         self.davy=["davy", "davies", "davyjoneslocker"]
-        self.tcave=["tcave", "cave", "caveofathousandtreasures"]
+        self.tcave=["tcave", "cave", "caveofathousandtreasures", "treasurecave"]
         self.kraken=["krak", "kraken", "krakensfortress"]
         self.fung=["fungal", "fc", "fungc", "fung", "fungalcavern"]
         self.cult=["cult", "cultist", "cultisthideout"]
         self.golem=["golem", "void", "voidgolem"]
         self.shatts=["shatters", "shatts", "theshatters"]
         self.onyx=["onyx", "onyxscastle", "castle", "oryx"]
+        self.citadel=["citadel", "cit", "omnipotent"]
         #UT Armours
         self.crown=["theforgottencrown", "crown"]
         self.thood=["thood", "twih", "twilighthood"]
@@ -232,6 +233,12 @@ class Wiki(commands.Cog):
         self.ot3=["orbt3", "t3orb"]
         self.ot4=["orbt4", "t4orb"]
         self.ot5=["orbt5", "t5orb"]
+        self.ot6=["orbt6", "t6orb"]
+        self.ot7=["orbt7", "t7orb"]
+        self.ot8=["orbt8", "t8orb"]
+        self.ot9=["orbt9", "t9orb"]
+        self.ot10=["orbt10", "t10orb"]
+        self.ot11=["orbt11", "t11orb"]
         self.conflict=["conflict", "orbofconflict"]
         self.econflict=["econflict", "eorbofconflict"]
         self.sorb=["sloworb", "sorb", "storb", "slowtouchorb"]
@@ -242,16 +249,28 @@ class Wiki(commands.Cog):
         self.ct3=["cloakt3", "t3cloak"]
         self.ct4=["cloakt4", "t4cloak"]
         self.ct5=["cloakt5", "t5cloak"]
+        self.ct6=["cloakt6", "t6cloak"]
+        self.ct7=["cloakt7", "t7cloak"]
+        self.ct8=["cloakt8", "t8cloak"]
+        self.ct9=["cloakt9", "t9cloak"]
+        self.ct10=["cloakt10", "t10cloak"]
+        self.ct11=["cloakt11", "t11cloak"]
         self.bcloak=["bcloak", "bloodycloak"]
         self.ebcloak=["ebcloak", "ebloodycloak"]
         self.ccloak=["ccloak", "combustioncloak"]
         self.eccloak=["eccloak", "ecombustioncloak"]
         #Helmets
-        self.het1=["helmett1", "t1helmet"]
-        self.het2=["helmett2", "t2helmet"]
-        self.het3=["helmett3", "t3helmet"]
-        self.het4=["helmett4", "t4helmet"]
-        self.het5=["helmett5", "t5helmet"]
+        self.het1=["helmett1", "t1helmet", "helmt1", "t1helm"]
+        self.het2=["helmett2", "t2helmet", "helmt2", "t2helm"]
+        self.het3=["helmett3", "t3helmet", "helmt3", "t3helm"]
+        self.het4=["helmett4", "t4helmet", "helmt4", "t4helm"]
+        self.het5=["helmett5", "t5helmet", "helmt5", "t5helm"]
+        self.het6=["helmett6", "t6helmet", "helmt6", "t6helm"]
+        self.het7=["helmett7", "t7helmet", "helmt7", "t7helm"]
+        self.het8=["helmett8", "t8helmet", "helmt8", "t8helm"]
+        self.het9=["helmett9", "t9helmet", "helmt9", "t9helm"]
+        self.het10=["helmett10", "t10helmet", "helmt10", "t10helm"]
+        self.het11=["helmett11", "t11helmet", "helmt11", "t11helm"]
         self.jugg=["jug", "jugg", "helmetofthejuggernaut"]
         self.ejugg=["ejug", "ejugg", "ehelmetofthejuggernaut"]
         self.ehelm=["ehelm", "ehelmet", "helmetoftheelements"]
@@ -262,6 +281,12 @@ class Wiki(commands.Cog):
         self.pt3=["poisont3", "t3poison"]
         self.pt4=["poisont4", "t4poison"]
         self.pt5=["poisont5", "t5poison"]
+        self.pt6=["poisont6", "t6poison"]
+        self.pt7=["poisont7", "t7poison"]
+        self.pt8=["poisont8", "t8poison"]
+        self.pt9=["poisont9", "t9poison"]
+        self.pt10=["poisont10", "t10poison"]
+        self.pt11=["poisont11", "t11poison"]
         self.ppoison=["ppoison", "plaguepoison"]
         self.eppoison=["eppoison", "eplaguepoison"]
         self.cfang=["cfang", "fpoison", "fangpoison", "crystallisedfang", "crystallisedfangpoison"]
@@ -272,6 +297,12 @@ class Wiki(commands.Cog):
         self.st3=["shieldt3", "t3shield"]
         self.st4=["shieldt4", "t4shield"]
         self.st5=["shieldt5", "t5shield"]
+        self.st6=["shieldt6", "t6shield"]
+        self.st7=["shieldt7", "t7shield"]
+        self.st8=["shieldt8", "t8shield"]
+        self.st9=["shieldt9", "t9shield"]
+        self.st10=["shieldt10", "t10shield"]
+        self.st11=["shieldt11", "t11shield"]
         self.cshield=["cshield", "crystalshield"]
         self.ecshield=["ecshield", "ecrystalshield"]
         self.ogmur=["ogmur", "shieldofogmur"]
@@ -282,6 +313,12 @@ class Wiki(commands.Cog):
         self.skt3=["skullt3", "t3skull"]
         self.skt4=["skullt4", "t4skull"]
         self.skt5=["skullt5", "t5skull"]
+        self.skt6=["skullt6", "t6skull"]
+        self.skt7=["skullt7", "t7skull"]
+        self.skt8=["skullt8", "t8skull"]
+        self.skt9=["skullt9", "t9skull"]
+        self.skt10=["skullt10", "t10skull"]
+        self.skt11=["skullt11", "t11skull"]
         self.sskull=["sskull", "shaitanskull", "shaitansskull"]
         self.esskull=["esskull", "eshaitanskull", "eshaitanskull"]
         self.heart=["heart", "heartofchronos", "cheart"]
@@ -292,6 +329,12 @@ class Wiki(commands.Cog):
         self.tt3=["trapt3", "t3trap"]
         self.tt4=["trapt4", "t4trap"]
         self.tt5=["trapt5", "t5trap"]
+        self.tt6=["trapt6", "t6trap"]
+        self.tt7=["trapt7", "t7trap"]
+        self.tt8=["trapt8", "t8trap"]
+        self.tt9=["trapt9", "t9trap"]
+        self.tt10=["trapt10", "t10trap"]
+        self.tt11=["trapt11", "t11trap"]
         self.ctrap=["ctrap", "crystaltrap"]
         self.ectrap=["ectrap", "ecrystaltrap"]
         self.cotrap=["cotrap", "coraltrap", "trapofcorals"]
@@ -302,6 +345,12 @@ class Wiki(commands.Cog):
         self.stt3=["start3", "t3star"]
         self.stt4=["start4", "t4star"]
         self.stt5=["start5", "t5star"]
+        self.stt6=["start6", "t6star"]
+        self.stt7=["start7", "t7star"]
+        self.stt8=["start8", "t8star"]
+        self.stt9=["start9", "t9star"]
+        self.stt10=["start10", "t10star"]
+        self.stt11=["start11", "t11star"]
         self.cstar=["cstar", "starofconflict", "conflictstar"]
         self.ecstar=["ecstar", "estarofconflict", "econflictstar"]
         self.estar=["estar", "elementalstar", "starofelements", "staroftheelements"]
@@ -312,12 +361,19 @@ class Wiki(commands.Cog):
         self.kt3=["kunait3", "t3kunai"]
         self.kt4=["kunait4", "t4kunai"]
         self.kt5=["kunait5", "t5kunai"]
+        self.kt6=["kunait6", "t6kunai"]
+        self.kt7=["kunait7", "t7kunai"]
+        self.kt8=["kunait8", "t8kunai"]
+        self.kt9=["kunait9", "t9kunai"]
+        self.kt10=["kunait10", "t10kunai"]
+        self.kt11=["kunait11", "t11kunai"]
         self.fkunai=["fkunai", "frozenkunai"]
         self.efkunai=["efkunai", "efrozenkunai"]
         self.ckunai=["ckunai", "crystallizedkunai"]
         self.eckunai=["ckunai", "ecrystallizedkunai"]
         #Misc
         self.gems=["gems", "gem"]
+        self.dust = ["dust", "magicdust"]
         print('Wiki intisialised')
 
     @commands.command(aliases=["wiki"])
@@ -372,6 +428,8 @@ class Wiki(commands.Cog):
             terms="shatters"
         elif terms in self.onyx:
             terms="onyx"
+        elif terms in self.citadel:
+            terms="citadel"
         #Armours
         elif terms in self.crown:
             terms="crown"
@@ -756,6 +814,18 @@ class Wiki(commands.Cog):
             terms = "ot4"
         elif terms in self.ot5:
             terms = "ot5"
+        elif terms in self.ot6:
+            terms = "ot6"
+        elif terms in self.ot7:
+            terms = "ot7"
+        elif terms in self.ot8:
+            terms = "ot8"
+        elif terms in self.ot9:
+            terms = "ot9"
+        elif terms in self.ot10:
+            terms = "ot10"
+        elif terms in self.ot11:
+            terms = "ot11"
         elif terms in self.conflict:
             terms = "conflict"
         elif terms in self.econflict:
@@ -775,6 +845,18 @@ class Wiki(commands.Cog):
             terms = "ct4"
         elif terms in self.ct5:
             terms = "ct5"
+        elif terms in self.ct6:
+            terms = "ct6"
+        elif terms in self.ct7:
+            terms = "ct7"
+        elif terms in self.ct8:
+            terms = "ct8"
+        elif terms in self.ct9:
+            terms = "ct9"
+        elif terms in self.ct10:
+            terms = "ct10"
+        elif terms in self.ct11:
+            terms = "ct11"
         elif terms in self.bcloak:
             terms="bcloak"
         elif terms in self.ebcloak:
@@ -794,6 +876,18 @@ class Wiki(commands.Cog):
             terms="het4"
         elif terms in self.het5:
             terms="het5"
+        elif terms in self.het6:
+            terms="het6"
+        elif terms in self.het7:
+            terms="het7"
+        elif terms in self.het8:
+            terms="het8"
+        elif terms in self.het9:
+            terms="het9"
+        elif terms in self.het10:
+            terms="het10"
+        elif terms in self.het11:
+            terms="het11"
         elif terms in self.jugg:
             terms="jugg"
         elif terms in self.ejugg:
@@ -813,6 +907,18 @@ class Wiki(commands.Cog):
             terms="pt4"
         elif terms in self.pt5:
             terms="pt5"
+        elif terms in self.pt6:
+            terms="pt6"
+        elif terms in self.pt7:
+            terms="pt7"
+        elif terms in self.pt8:
+            terms="pt8"
+        elif terms in self.pt9:
+            terms="pt9"
+        elif terms in self.pt10:
+            terms="pt10"
+        elif terms in self.pt11:
+            terms="pt11"
         elif terms in self.ppoison:
             terms="ppoison"
         elif terms in self.eppoison:
@@ -832,6 +938,18 @@ class Wiki(commands.Cog):
             terms="st4"
         elif terms in self.st5:
             terms="st5"
+        elif terms in self.st6:
+            terms="st6"
+        elif terms in self.st7:
+            terms="st7"
+        elif terms in self.st8:
+            terms="st8"
+        elif terms in self.st9:
+            terms="st9"
+        elif terms in self.st10:
+            terms="st10"
+        elif terms in self.st11:
+            terms="st11"
         elif terms in self.cshield:
             terms="cshield"
         elif terms in self.ecshield:
@@ -851,6 +969,18 @@ class Wiki(commands.Cog):
             terms="skt4"  
         elif terms in self.skt5:
             terms="skt5"     
+        elif terms in self.skt6:
+            terms="skt6"     
+        elif terms in self.skt7:
+            terms="skt7"  
+        elif terms in self.skt8:
+            terms="skt8"  
+        elif terms in self.skt9:
+            terms="skt9"  
+        elif terms in self.skt10:
+            terms="skt10"     
+        elif terms in self.skt11:
+            terms="skt11"
         elif terms in self.sskull:
             terms="sskull"
         elif terms in self.esskull:
@@ -870,6 +1000,18 @@ class Wiki(commands.Cog):
             terms="tt4"
         elif terms in self.tt5:
             terms="tt5"
+        elif terms in self.tt6:
+            terms="tt6"
+        elif terms in self.tt7:
+            terms="tt7"
+        elif terms in self.tt8:
+            terms="tt8"
+        elif terms in self.tt9:
+            terms="tt9"
+        elif terms in self.tt10:
+            terms="tt10"
+        elif terms in self.tt11:
+            terms="tt11"
         elif terms in self.ctrap:
             terms="ctrap"
         elif terms in self.ectrap:
@@ -889,6 +1031,18 @@ class Wiki(commands.Cog):
             terms="stt4"
         elif terms in self.stt5:
             terms="stt5"
+        elif terms in self.stt6:
+            terms="stt6"
+        elif terms in self.stt7:
+            terms="stt7"
+        elif terms in self.stt8:
+            terms="stt8"
+        elif terms in self.stt9:
+            terms="stt9"
+        elif terms in self.stt10:
+            terms="stt10"
+        elif terms in self.stt11:
+            terms="stt11"
         elif terms in self.cstar:
             terms="cstar"
         elif terms in self.ecstar:
@@ -908,6 +1062,18 @@ class Wiki(commands.Cog):
             terms="kt4"
         elif terms in self.kt5:
             terms="kt5"
+        elif terms in self.kt6:
+            terms="kt6"
+        elif terms in self.kt7:
+            terms="kt7"
+        elif terms in self.kt8:
+            terms="kt8"
+        elif terms in self.kt9:
+            terms="kt9"
+        elif terms in self.kt10:
+            terms="kt10"
+        elif terms in self.kt11:
+            terms="kt11"
         elif terms in self.fkunai:
             terms="fkunai"
         elif terms in self.efkunai:
@@ -919,8 +1085,11 @@ class Wiki(commands.Cog):
         #Misc
         elif terms in self.gems:
             terms="gems"
+        elif terms in self.dust:
+            terms="dust"
+
         if terms in ["warrior", "knight", "necro", "battlemage", "huntress", "assassin", "rogue", "ninja", "samurai"]:
-            with open(r'rotmc.json') as f:
+            with open('rotmc.json') as f:
                 f = json.load(f)
             data = f["classes"][terms]
             weapon=data["weapon"]
@@ -937,10 +1106,12 @@ class Wiki(commands.Cog):
             crithit=stats["crithit"]
             critdam=stats["critdam"]
             tn=data["tn"]
-            em=embeds.char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, crithit, critdam, tn)
+            name=data["dname"]
+            em=embeds.char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, crithit, critdam, tn, name)
+            em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
             await ctx.send(embed=em)
-        elif terms in ["pcove", "glair", "eforest", "abyss", "udl", "davy", "tcave", "kraken", "fung", "cult", "golem", "shatters", "chronos", "onyx"]:
-            with open(r'rotmc.json') as f:
+        elif terms in ["pcove", "glair", "eforest", "abyss", "udl", "davy", "tcave", "kraken", "fung", "cult", "golem", "shatters", "chronos", "onyx", "citadel"]:
+            with open('rotmc.json') as f:
                 f = json.load(f)
             data=f["dungs"][terms]
             tn=data["tn"]
@@ -949,6 +1120,7 @@ class Wiki(commands.Cog):
             gems=drops["gems"]
             pots=drops["pots"]
             pots=', '.join(pots)
+            name=data["name"]
             if drops["runes"] == "True":
                 runes=True
             else:
@@ -960,10 +1132,11 @@ class Wiki(commands.Cog):
             droploc=', '.join(droploc)
             colour=data["colour"]
             treq=data["treq"]
-            em=embeds.dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droploc, colour, treq)
+            em=embeds.dungs(ctx, name, gear, abilities, gems, whites, tn, pots, runes, droploc, colour, treq)
+            em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
             await ctx.send(embed=em)
         elif terms in ["eochest", "eochaps", "ochest", "ochaps", "oboots","eoboots","eflegs", "fboots", "efboots", "ecrobe", "crown", "thood", "svisor", "vhat", "sarmour", "cgreaves", "crobe", "lboots", "ssandals", "smask", "chood", "bplate", "flegs", "mmask", "mchest", "mgreaves", "mboots", "ehat", "earmour", "echaps", "eboots", "cehood", "cerobe", "celegs", "ceboots", "ebplate", "llegs", "ellegs", "echood", "esmask", "essandals", "elboots", "ecgreaves", "esarmour", "evhat", "esvisor", "ethood", "ecrown"]:
-            with open(r'rotmc.json') as f:
+            with open('rotmc.json') as f:
                 f = json.load(f)
             data=f["items"][terms]
             slot = data["slot"]
@@ -981,9 +1154,10 @@ class Wiki(commands.Cog):
             tn=data["tn"]
             colour=data["colour"]
             em=embeds.armours(ctx, slot, classes, displayname, levelreq, dropsfrom, stats, gems, runes, essence, tn, exalted, colour)
+            em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
             await ctx.send(embed=em)
         elif terms in ["dbow", "edbow", "dkat", "edkat", "kendo", "ekendo", "okat", "eokat", "cbow", "ecbow", "lbow", "elbow", "bbow", "ebbow", "obow", "eobow", "sdagger", "esdagger", "cdirk", "ecdirk", "ddagger", "eddagger", "gdagger", "egdagger", "odagger", "eodagger", "shovel", "eshovel", "cultstaff", "ecultstaff", "crystalstaff", "ecrystalstaff", "asteroid", "easteroid", "ostaff", "eostaff", "cutlass", "ecutlass", "dblade", "edblade", "gsword", "egsword", "tcleaver", "etcleaver", "osword", "eosword"]:
-            with open(r'rotmc.json') as f:
+            with open('rotmc.json') as f:
                 f = json.load(f)
             data=f["items"][terms]
             dname=data["displayname"]
@@ -1003,80 +1177,96 @@ class Wiki(commands.Cog):
             tn=data["tn"]
             colour=data["colour"]
             em=embeds.weapons(ctx, dname, lreq, droploc, exalted, dmg, rge, shots, velocity, pierces, cd, tpe, classes, gem, tn, colour)
+            em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
             await ctx.send(embed=em)
-        elif terms in ["ot1", "ot2", "ot3", "ot4", "ot5", "conflict", "econflict", "sorb", "esorb", "ct1", "ct2", "ct3", "ct4", "ct5", "bcloak", "ebcloak", "ccloak", "eccloak", "het1", "het2", "het3", "het4", "het5", "jugg", "ejugg", "ehelm", "eehelm", "pt1", "pt2", "pt3", "pt4", "pt5", "ppoison", "eppoison", "cfang", "ecfang", "st1", "st2", "st3", "st4", "st5", "cshield", "ecshield", "ogmur", "eogmur", "skt1", "skt2", "skt3", "skt4", "skt5", "sskull", "esskull", "heart", "eheart", "tt1", "tt2", "tt3", "tt4", "tt5", "ctrap", "ectrap", "cotrap", "ecotrap", "stt1", "stt2", "stt3", "stt4", "stt5", "cstar", "ecstar", "estar", "eestar", "kt1", "kt2", "kt3", "kt4", "kt5", "fkunai", "efkunai", "ckunai", "eckunai"]:
-            with open(r'rotmc.json') as f:
+        elif terms in ["ot1", "ot2", "ot3", "ot4", "ot5", "ot6", "ot7", "ot8", "ot9", "ot10", "ot11", "conflict", "econflict", "sorb", "esorb", "ct1", "ct2", "ct3", "ct4", "ct5", "ct6", "ct7", "ct8", "ct9", "ct10", "ct11", "bcloak", "ebcloak", "ccloak", "eccloak", "het1", "het2", "het3", "het4", "het5", "het6", "het7", "het8", "het9", "het10", "het11", "jugg", "ejugg", "ehelm", "eehelm", "pt1", "pt2", "pt3", "pt4", "pt5", "pt6", "pt7", "pt8", "pt9", "pt10", "pt11", "ppoison", "eppoison", "cfang", "ecfang", "st1", "st2", "st3", "st4", "st5", "st6", "st7", "st8", "st9", "st10", "st11", "cshield", "ecshield", "ogmur", "eogmur", "skt1", "skt2", "skt3", "skt4", "skt5", "skt6", "skt7", "skt8", "skt9", "skt10", "skt11", "sskull", "esskull", "heart", "eheart", "tt1", "tt2", "tt3", "tt4", "tt5", "tt6", "tt7", "tt8", "tt9", "tt10", "tt11", "ctrap", "ectrap", "cotrap", "ecotrap", "stt1", "stt2", "stt3", "stt4", "stt5", "stt6", "stt7", "stt8", "stt9", "stt10", "stt11", "cstar", "ecstar", "estar", "eestar", "kt1", "kt2", "kt3", "kt4", "kt5", "kt6", "kt7", "kt8", "kt9", "kt10", "kt11", "fkunai", "efkunai", "ckunai", "eckunai"]:
+            with open('rotmc.json') as f:
                 f = json.load(f)
-                data=f["items"][terms]
-                dname=data["displayname"]
-                lreq = data["levelreq"]
-                droploc = data["droploc"]
-                exalted = data["exalted"]
-                cd=data["cd"]
-                ability=data["ability"]
-                gem=data["gem"]
-                colour=data["colour"]
-                tn=data["tn"]
-                em=embeds.abilities(dname, lreq, droploc, exalted, cd, ability, gem, tn, colour)
-                await ctx.send(embed=em)
+            data=f["items"][terms]
+            dname=data["displayname"]
+            lreq = data["levelreq"]
+            droploc = data["droploc"]
+            exalted = data["exalted"]
+            cd=data["cd"]
+            ability=data["ability"]
+            gem=data["gem"]
+            colour=data["colour"]
+            tn=data["tn"]
+            tp=data["tp"]
+            em=embeds.abilities(dname, lreq, droploc, exalted, cd, ability,gem, tn, colour, tp)
+            em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+            await ctx.send(embed=em)
         elif terms in ["ht11", "ht10", "ht9", "ht8", "ht7", "ht6", "ht5", "ht4", "ht3", "ht2", "ht1", "lt11", "lt10", "lt9", "lt8", "lt7", "lt6", "lt5", "lt4", "lt3", "lt2", "lt1", "rt11", "rt10", "rt9", "rt8", "rt7", "rt6", "rt5", "rt4", "rt3", "rt2", "rt1"]:
-            with open(r'rotmc.json') as f:
+            with open('rotmc.json') as f:
                 f = json.load(f)
-                data=f["items"][terms]
-                tpe=data["type"]
-                gem=data["gem"]
-                lreq=data["lreq"]
-                stats=data["stats"]
-                stats=', '.join(stats)
-                classes=data["classes"]
-                classes=', '.join(classes)
-                tier=data["tier"]
-                name=data["name"]
-                colour=data["colour"]
-                tn=data["tn"]
-                em=embeds.tarmours(tpe, gem, lreq, stats, classes, tier, name, colour, tn)
-                await ctx.send(embed=em)
+            data=f["items"][terms]
+            tpe=data["type"]
+            gem=data["gem"]
+            lreq=data["lreq"]
+            stats=data["stats"]
+            stats=', '.join(stats)
+            classes=data["classes"]
+            classes=', '.join(classes)
+            tier=data["tier"]
+            name=data["name"]
+            colour=data["colour"]
+            tn=data["tn"]
+            em=embeds.tarmours(tpe, gem, lreq, stats, classes, tier, name, colour, tn)
+            em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+            await ctx.send(embed=em)
         elif terms in ["katt1", "katt2", "katt3", "katt4", "katt5", "katt6", "katt7", "katt8", "katt9", "katt10", "katt11", "bowt1", "bowt2", "bowt3", "bowt4", "bowt5", "bowt6", "bowt7", "bowt8", "bowt9", "bowt10", "bowt11", "daggert1", "daggert2", "daggert3", "daggert4", "daggert5", "daggert6", "daggert7", "daggert8", "daggert9", "daggert10", "daggert11", "stafft1", "stafft2", "stafft3", "stafft4", "stafft5", "stafft6", "stafft7", "stafft8", "stafft9", "stafft10", "stafft11", "swordt1", "swordt2", "swordt3", "swordt4", "swordt5", "swordt6", "swordt7", "swordt8", "swordt9", "swordt10", "swordt11"]:
-            with open(r'rotmc.json') as f:
+            with open('rotmc.json') as f:
                 f = json.load(f)
-                data=f["items"][terms]
-                tpe=data["type"]
-                damage=data["damage"]
-                rge=data["range"]
-                shots=data["shots"]
-                velocity=data["velocity"]
-                pierces=data["pierces"]
-                cd=data["cd"]
-                lreq=data["lreq"]
-                classes=data["classes"]
-                classes=', '.join(classes)
-                name=data["name"]
-                gem=data["gem"]
-                tier=data["tier"]
-                colour=data["colour"]
-                tn=data["tn"]
-                em=embeds.tweapons(tpe, damage, rge, shots, velocity, pierces, cd, lreq, classes, name, gem, tier, colour, tn)
-                await ctx.send(embed=em)
+            data=f["items"][terms]
+            tpe=data["type"]
+            damage=data["damage"]
+            rge=data["range"]
+            shots=data["shots"]
+            velocity=data["velocity"]
+            pierces=data["pierces"]
+            cd=data["cd"]
+            lreq=data["lreq"]
+            classes=data["classes"]
+            classes=', '.join(classes)
+            name=data["name"]
+            gem=data["gem"]
+            tier=data["tier"]
+            colour=data["colour"]
+            tn=data["tn"]
+            em=embeds.tweapons(tpe, damage, rge, shots, velocity, pierces, cd, lreq, classes, name, gem, tier, colour, tn)
+            em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+            await ctx.send(embed=em)
         elif terms in ["belytra", "selytra", "gelytra", "pelytra", "delytra", "oelytra", "brelytra"]:
-            with open(r'rotmc.json') as f:
+            with open('rotmc.json') as f:
                 f = json.load(f)
-                data=f["items"][terms]
-                name=data["name"]
-                defense=data["defense"]
-                attack=data["attack"]
-                speed=data["speed"]
-                dodge=data["dodge"]
-                health=data["health"]
-                gem=data["gem"]
-                colour=data["colour"]
-                tn=data["tn"]
-                em=embeds.elytras(defense, attack, speed, dodge, health, gem, name, colour, tn)
-                await ctx.send(embed=em)
+            data=f["items"][terms]
+            name=data["name"]
+            defense=data["defense"]
+            attack=data["attack"]
+            speed=data["speed"]
+            dodge=data["dodge"]
+            health=data["health"]
+            gem=data["gem"]
+            colour=data["colour"]
+            tn=data["tn"]
+            em=embeds.elytras(defense, attack, speed, dodge, health, gem, name, colour, tn)
+            em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+            await ctx.send(embed=em)
         elif terms == "gems":
             paginator = Paginator(pages=self.get_pages())
             await paginator.start(ctx)
+        elif terms == "dust":
+            em=embeds.dust()
+            await ctx.send(embed=em)
+        elif terms in ["elytras", "elytra"]:
+            em=embeds.elytrainfo()
+            await ctx.send(embed=em)
+        elif terms in ["dungs", "dung", "dungeon", "dungeons"]:
+            em=embeds.dungeon(ctx)
+            em.set_author(name=str(ctx.author.display_name), icon_url=str(ctx.author.avatar_url))
+            await ctx.send(embed=em)
         else:
-            await ctx.send(f"couldn't find {terms} in the database, please try again")
+            await ctx.send(content= f"couldn't find {terms} in the database, please try again", delete_after = 10)
 
     def get_pages(self):
         pages = []
@@ -1189,7 +1379,6 @@ class Wiki(commands.Cog):
         embed.color=discord.Color.random()
         pages.append(embed)
         return pages
-    
 
 def setup(client):
     client.add_cog(Wiki(client))

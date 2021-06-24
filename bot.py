@@ -2,15 +2,16 @@ import subprocess
 import sys
 try:
     import discord
-except:
-    subprocess.check_call([sys.executable, "pip", "install", "-r", "requirements.txt"])
+except ModuleNotFoundError:
+    subprocess.run(["pip", "install", "-r", "requirements.txt"])
+    import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 import os 
 import json
 from webserver import keep_alive
 from itertools import cycle
-import datetime
+import datetime, time
 load_dotenv()
 token=os.getenv("TOKEN")
 
@@ -24,10 +25,11 @@ client=commands.Bot(command_prefix=get_prefix)
 client.remove_command("help")
 status=cycle(['RotMC', 'Do ;wiki <itemname>'])
 
+
 @client.event
 async def on_ready():
     change_status.start()
-    client.start_time=datetime.datetime.utcnow()
+    client.start_time=time.time()
     print('Bot is ready')
 
 @tasks.loop(seconds=300)
@@ -58,12 +60,12 @@ async def on_guild_remove(guild):
 @commands.guild_only()
 @commands.has_permissions(administrator=True)
 async def prefix(ctx, prefix):
-    with open('prefixes.json', 'r') as f:
+    with open(r'prefixes.json', 'r') as f:
         prefixes=json.load(f)
     
     prefixes[str(ctx.guild.id)] = prefix
 
-    with open('prefixes.json', 'w') as f:
+    with open(r'prefixes.json', 'w') as f:
         json.dump(prefixes, f, indent=4)
     await ctx.send(f'Prefix has been changed to: `{prefix}`')
 
@@ -71,7 +73,7 @@ async def prefix(ctx, prefix):
 @commands.is_owner()
 async def quit(ctx):
     await ctx.send("Shutting down the bot")
-    await client.logout()
+    await client.close()
 
 @client.command()
 @commands.is_owner()

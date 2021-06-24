@@ -1,7 +1,19 @@
 import discord 
-def char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, crithit, critdam, tn):
+def dungeon(ctx):
     embed=discord.Embed(
-        title="**Class info**",
+        title="**Dungeon info**",
+        description="There are currently `15` dungeons in RotMC. The names of these are listed below. Each dungeon requires a certain amount of 'Tier Points' to enter. For tiered items this number will always match the appropriate tier e.g. a tier 7 chestpiece has 7 Tier Points. The higher the amount of Tier Points required the more difficult the dungeon is. \n For more information please do `;wiki <dungeon name>`",
+        color=ctx.author.color
+    )
+    embed.add_field(
+        name="**Dungeon list**",
+        value="`1.` Pirate Cove \n `2.` Enchanted Forest \n `3.` Goblin's Lair \n `4.` Abyss of Demons \n `5.` Undead Lair \n `6.` Treasure Cave \n `7.` Kraken's Fortress \n `8.` Davy Jones' Locker \n `9.` Fungal Cavern \n `10.` Onyx's Castle (Part 1) \n `11.` Cultist Hideout \n `12.` Omnipotent's Citadel \n `13.` Void \n `14.` The Shatters \n `15.` Onyx's Castle (Part 2)",
+        inline=True
+    )
+    return embed
+def char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, crithit, critdam, tn, name):
+    embed=discord.Embed(
+        title=f"Class info for **{name}**",
         color=ctx.author.color
     )
     embed.add_field(
@@ -16,25 +28,25 @@ def char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, cr
     )
     embed.set_thumbnail(url=tn)
     return embed
-def dungs(ctx, gear, abilities, gems, whites, tn, pots, runes, droplocs, colour, treq):
+def dungs(ctx, name, gear, abilities, gems, whites, tn, pots, runes, droplocs, colour, treq):
     embed=discord.Embed(
-        title="**Dungeon info**",
+        title=f"Dungeon info for **{name}**",
         color=ctx.author.color
     )
     if runes:
         embed.add_field(
             name="**Drops**",
-            value=f"`Gear:` {gear} \n `Abilities:` {abilities} \n `Gems:` {gems} \n `Whites:` {whites}\n `Pots:` {pots} \n `Drop Locations:` {droplocs} \n `Tier Points:` {treq} \n `Other:` Runes"
+            value=f"`Gear:` {gear} \n `Gems:` {gems} \n `Whites:` {whites}\n `Pots:` {pots} \n `Drop Locations:` {droplocs} \n `Tier Points:` {treq} \n `Other:` Runes"
         )
     else:
         embed.add_field(
             name="**Drops**",
-            value=f"`Gear:` {gear} \n `Abilities:` {abilities} \n `Gems:` {gems} \n `Whites:` {whites}\n `Drop Locations:` {droplocs} \n `Pots:` {pots} \n `Tier Points:` {treq}"
+            value=f"`Gear:` {gear} \n `Gems:` {gems} \n `Whites:` {whites}\n `Drop Locations:` {droplocs} \n `Pots:` {pots} \n `Tier Points:` {treq}"
         )
 
     embed.color=int(colour)
     embed.set_thumbnail(url=tn)
-    embed.set_footer(text="For more information do ;info <itemname>")
+    embed.set_footer(text="For more information do ;info <search term>")
     return embed
 def armours(ctx, slot, classes, displayname, levelreq, dropsfrom, stats, gems, runes, essence, tn, exalted, colour):
     if slot in ["Head", "Chest", "Leggings", "Feet"]:
@@ -80,16 +92,16 @@ def weapons(ctx, dname, lreq, droploc, exalted, dmg, rge, shots, velocity, pierc
     embed.set_thumbnail(url=tn)
     embed.color=int(colour)
     return embed
-def abilities(dname, lreq, droploc, exalted, cd, ability, gem, tn, colour):
+def abilities(dname, lreq, droploc, exalted, cd, ability, gem, tn, colour, tp):
     if exalted == "True":
         embed=discord.Embed(
             title="**Ability info**",
-            description=f"`Display Name:` {dname} \n `Level Requirement:` {lreq} \n `Exalted:` True \n `Cooldown:` {cd} \n `Ability:` {ability} \n `Gem Slots:` {gem}"
+            description=f"`Display Name:` {dname} \n `Level Requirement:` {lreq} \n `Exalted:` True \n `Cooldown:` {cd} \n `Ability:` {ability} \n `Gem Slots:` {gem} \n `Tier Points:` {tp}"
         )
     else:
         embed=discord.Embed(
             title="**Ability info**",
-            description=f"`Display Name:` {dname} \n `Level Requirement:` {lreq} \n `Drop Location:` {droploc} \n `Cooldown:` {cd} \n `Ability:` {ability} \n `Gem Slots:` {gem}"
+            description=f"`Display Name:` {dname} \n `Level Requirement:` {lreq} \n `Drop Location:` {droploc} \n `Cooldown:` {cd} \n `Ability:` {ability} \n `Gem Slots:` {gem} \n `Tier Points:` {tp}"
         )
 
     embed.set_thumbnail(url=tn)
@@ -139,5 +151,29 @@ def elytras(defense, attack, speed, dodge, health, gem, name, colour, tn):
 def dust():
     embed=discord.Embed(
         title="**Dust info**",
-        description = "Dust is used to make the success rate of gems. There are 5 different kinds of dust."
+        description = "Dust is used to increase the success rate of gems. There are 5 different kinds of dust."
+    )
+    embed.add_field(
+        name="**Dust Types**",
+        value="<:dust1:838121110846963712> Dust I : `+2%` \n <:dust2:838121110868197416> Dust II : `+4%` \n <:dust3:838121110922854410> Dust III : `+6%` \n <:dust4:838121111027318784> Dust IV : `+8%` \n <:dust5:838121110901227560> Dust V : `+10%`"
+    )
+    embed.color=discord.Color.random()
+    embed.set_thumbnail(url="https://cdn.discordapp.com/emojis/838121110901227560.png?v=1")
+    return embed
+def elytrainfo():
+    embed=discord.Embed(
+        title="**Elytra Info**",
+        description="Elytras can be obtained through crates. \n If you hold shift while looking up until fire particles appear at your feet you will launch yourself into the air. This can be used to get extra speed in the realm. **ELYTRA FLIGHT IS BLOCKED IN DUNGEONS**",
+        color=discord.Color.random()
+    )
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/835848485566676992/838017353076965376/bedrockk.png")
+    embed.add_field(
+        name="**Elytra Aliases**",
+        value="For more info you can use `;wiki <elytra tier>elytra` \n Make sure there is no space between the elytra tier and the word elytra"
+    )
+    return embed
+def guildinfo():
+    embed=discord.Embed(
+        title="**Guild info**",
+        description="Guilds can be upgraded using fame."
     )

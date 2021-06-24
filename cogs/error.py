@@ -11,11 +11,11 @@ class ErrorHandler(commands.Cog):
       return
     if isinstance(error, commands.CommandNotFound):
       await ctx.message.delete()
-      return await ctx.send("That command does not exist. If this is an error please DM DevAcidic#9633")
+      return await ctx.send(content="That command does not exist. If this is an error please DM DevAcidic#9633", delete_after=10)
     if isinstance(error, commands.MissingRequiredArgument):
       embed = discord.Embed(title="Error!", description="You appear to be missing a required argument! \n If this is an error please DM DevAcidic#9633", color=discord.Color.red())
       embed.add_field(name="Missing argument", value=f'`{error.args[0]}`', inline=False)
-      return await ctx.send(embed=embed)
+      return await ctx.send(embed=embed, delete_after=20)
 
 def setup(client):
   client.add_cog(ErrorHandler(client))
