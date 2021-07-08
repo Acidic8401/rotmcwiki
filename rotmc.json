@@ -180,7 +180,8 @@
             },
             "tn": "https://cdn.discordapp.com/attachments/798557625482084434/838806841936707614/pcovekey.png",
             "droploc": [
-                "Pirates"
+                "Pirates",
+                "Common Crate"
             ],
             "colour": 6570257,
             "treq": "6 (Full T1 Set)"
@@ -203,7 +204,8 @@
             "tn": "https://cdn.discordapp.com/attachments/798557625482084434/838811708008824862/glairkey.png",
             "droploc": [
                 "Goblins",
-                "Common Crate"
+                "Common Crate",
+                "Uncommon Crate"
             ],
             "colour": 949544,
             "treq": "18 (Full T3 Set)"
@@ -237,7 +239,7 @@
             "drops": {
                 "gear": "Tier 8-9",
                 "abilities": "Tier 2-4 Abilities",
-                "gems": "Level 2-4 Gems",
+                "gems": "Level 3-4 Gems",
                 "pots": [
                     "Speed Pots",
                     "Defense Pots",
@@ -276,7 +278,7 @@
             "tn": "https://cdn.discordapp.com/attachments/798557625482084434/812069319630258216/abysskey.png",
             "droploc": [
                 "Ice Demon",
-                "Common Crate"
+                "Uncommon Crate"
             ],
             "colour": 12397869,
             "treq": "24 (Full T4 Set)"
@@ -291,14 +293,15 @@
                     "Attack Pots"
                 ],
                 "whites": [
-                    "Doom Bow"
+                    "Doom Bow",
+                    "Doom Katana"
                 ],
                 "runes": "False"
             },
             "tn": "https://cdn.discordapp.com/attachments/798557625482084434/812098821856165898/udlkey.png",
             "droploc": [
                 "Ghost God",
-                "Common Crate",
+                "Crate",
                 "Uncommon Crate"
             ],
             "colour": 11776947,
@@ -309,7 +312,7 @@
             "drops": {
                 "gear": "Tier 6-8",
                 "abilities": "Tier 2-4 Abilities",
-                "gems": "Level 2-4 Gems",
+                "gems": "Level 3-4 Gems",
                 "pots": [
                     "Attack Pots"
                 ],
@@ -323,8 +326,7 @@
             "tn": "https://cdn.discordapp.com/attachments/798557625482084434/812101179378630667/davykey.png",
             "droploc": [
                 "Hermit Master",
-                "Common Crate",
-                "Uncommon Crate"
+                "Rare Crate"
             ],
             "colour": 1723756,
             "treq": "36 (Full T6 Set)"
@@ -339,7 +341,9 @@
                     "Vitality Pots"
                 ],
                 "whites": [
-                    "Lightning Boots"
+                    "Lightning Boots",
+                    "Lightning Chaps",
+                    "Lightning Bow"
                 ],
                 "runes": "False"
             },
@@ -356,7 +360,7 @@
             "drops": {
                 "gear": "Tier 5-7",
                 "abilities": "Tier 2-5 Abilities",
-                "gems": "Level 2-5 Gems",
+                "gems": "Level 2-3 Gems",
                 "pots": [
                     "Attack Pots",
                     "Defense Pots",
@@ -364,11 +368,16 @@
                 ],
                 "whites": [
                     "Bow of Corals",
+                    "Trap of Corals",
                     "Mask Of Shaitan",
                     "Shaitan's Skull",
-                    "Plague Poison"
+                    "Plague Poison",
+                    "Combustion Cloak",
+                    "Helmet of the Elements",
+                    "Star of the Elements",
+                    "Frozen Kunai"
                 ],
-                "runes": "True"
+                "runes": "False"
             },
             "tn": "https://cdn.discordapp.com/attachments/798557625482084434/812353588197720064/krakenkey.png",
             "droploc": [
@@ -383,7 +392,7 @@
             "drops": {
                 "gear": "Tier 6-8",
                 "abilities": "Tier 2-5 Abilities",
-                "gems": "Level 2-5 Gems",
+                "gems": "Level 3-4 Gems",
                 "pots": [
                     "Evasion Pots"
                 ],
@@ -391,7 +400,7 @@
                     "Crystal Trap",
                     "Crystal Shield"
                 ],
-                "runes": "True"
+                "runes": "False"
             },
             "tn": "https://cdn.discordapp.com/attachments/798557625482084434/812356842671308810/fungalkey.png",
             "droploc": [
@@ -406,7 +415,7 @@
             "drops": {
                 "gear": "Tier 8-9",
                 "abilities": "Tier 2-5 Abilities",
-                "gems": "Level 2-5 Gems",
+                "gems": "Level 3-4 Gems",
                 "pots": [
                     "Evasion Pots"
                 ],
@@ -419,7 +428,7 @@
             "tn": "https://cdn.discordapp.com/attachments/798557625482084434/812359715174481950/cultistkey.png",
             "droploc": [
                 "Forgotten Sentry",
-                "Epic Crate"
+                "Legendary Crate"
             ],
             "colour": 9175554,
             "treq": "42 (Full T7 Set)"
@@ -446,14 +455,14 @@
                 "Epic Crate"
             ],
             "colour": 10105078,
-            "treq": "42 (Full T7 Set)"
+            "treq": "36 (Full T6 Set)"
         },
         "golem": {
             "name": "Void",
             "drops": {
                 "gear": "Tier 9-10",
-                "abilities": "Tier 2-5 Abilities",
-                "gems": "Level 2-5 Gems",
+                "abilities": "Tier 4-5 Abilities",
+                "gems": "Level 4-5 Gems",
                 "pots": [
                     "Health Pots"
                 ],
@@ -477,7 +486,7 @@
             "drops": {
                 "gear": "Tier 9-10",
                 "abilities": "Tier 2-5 Abilities",
-                "gems": "Level 2-5 Gems",
+                "gems": "Level 4-5 Gems",
                 "pots": [
                     "Vitality Pots",
                     "Evasion Pots",
@@ -2754,6 +2763,102 @@
             "tp": 13,
             "tn": "https://cdn.discordapp.com/attachments/835848485566676992/835879513085968404/flegs2.png"
         },
+        "omnirobe": {
+            "slot": "Chest",
+            "classes": [
+                "Necromancer",
+                "Battlemage"
+            ],
+            "displayname": "Omnipotent Robe",
+            "levelreq": "20",
+            "dropsfrom": "Omnipotent",
+            "exalted": "False",
+            "stats": [
+                "+16% Defense",
+                "+10% Speed",
+                "-4 Health",
+                "+15 Vitality"
+            ],
+            "gem": "3",
+            "runes": "1",
+            "essence": "True",
+            "colour": 10181046,
+            "tp": 11,
+            "tn": "https://cdn.discordapp.com/attachments/847118122255253534/859158328840028210/omnipotentrobe.png"
+        },
+        "eomnirobe": {
+            "slot": "Chest",
+            "classes": [
+                "Necromancer",
+                "Battlemage"
+            ],
+            "displayname": "Exalted Omnipotent Robe",
+            "levelreq": "20",
+            "dropsfrom": "Omnipotent",
+            "exalted": "True",
+            "stats": [
+                "+16% Defense",
+                "+10% Speed",
+                "-4 Health",
+                "+15 Vitality",
+                "+10% Crit Damage",
+                "+10% Crit Hit"
+            ],
+            "gem": "3",
+            "runes": "1",
+            "essence": "True",
+            "colour": 10181046,
+            "tp": 11,
+            "tn": "https://cdn.discordapp.com/attachments/847118122255253534/859158339628171274/omnipotentrobe2.png"
+        },
+        "omnilegs": {
+            "slot": "Leggings",
+            "classes": [
+                "Necromancer",
+                "Battlemage"
+            ],
+            "displayname": "Omnipotent Leggings",
+            "levelreq": "20",
+            "dropsfrom": "Omnipotent",
+            "exalted": "False",
+            "stats": [
+                "+16% Defense",
+                "+10% Speed",
+                "-4 Health",
+                "+15 Vitality"
+            ],
+            "gem": "3",
+            "runes": "1",
+            "essence": "False",
+            "colour": 10181046,
+            "tp": 11,
+            "tn": "https://cdn.discordapp.com/attachments/847118122255253534/859158347717541898/omnipotentleggings.png"
+        },
+        "eomnilegs": {
+            "slot": "Leggings",
+            "classes": [
+                "Necromancer",
+                "Battlemage"
+            ],
+            "displayname": "Exalted Omnipotent Leggings",
+            "levelreq": "20",
+            "dropsfrom": "Omnipotent",
+            "exalted": "True",
+            "stats": [
+                "+16% Defense",
+                "+10% Speed",
+                "-4 Health",
+                "+15 Vitality",
+                "+10% Crit Damage",
+                "+10% Crit Hit"
+            ],
+            "gem": "3",
+            "runes": "1",
+            "essence": "False",
+            "colour": 10181046,
+            "tp": 11,
+            "tn": "https://cdn.discordapp.com/attachments/847118122255253534/859158356333690880/omnipotentleggings2.png"
+        },
         "crobe": {
             "slot": "Chest",
             "classes": [
@@ -3305,6 +3410,48 @@
             "tp": 14,
             "tn": "https://cdn.discordapp.com/attachments/835848485566676992/835921312965984337/okatana2.png"
         },
+        "ckat": {
+            "displayname": "Carrot on a Stick",
+            "levelreq": "18",
+            "dropsfrom": "B. Chungus",
+            "exalted": "False",
+            "damage": "14",
+            "range": "14",
+            "shots": "1",
+            "velocity": "35 (Very High)",
+            "pierces": "Yes",
+            "cd": "0.9s",
+            "type": "Katana",
+            "classes": [
+                "Ninja",
+                "Samurai"
+            ],
+            "gem": "3",
+            "colour": 10181046,
+            "tp": 11,
+            "tn": "https://cdn.discordapp.com/attachments/810948185727696897/859174077700898836/cstick.png"
+        },
+        "eckat": {
+            "displayname": "Exalted Carrot on a Stick",
+            "levelreq": "18",
+            "dropsfrom": "B. Chungus",
+            "exalted": "True",
+            "damage": "21",
+            "range": "14",
+            "shots": "1",
+            "velocity": "35 (Very High)",
+            "pierces": "Yes",
+            "cd": "0.9s",
+            "type": "Katana",
+            "classes": [
+                "Ninja",
+                "Samurai"
+            ],
+            "gem": "3",
+            "colour": 7419530,
+            "tp": 11,
+            "tn": "https://cdn.discordapp.com/attachments/810948185727696897/859174075220623391/cstick2.png"
+        },
         "dbow": {
             "displayname": "Doom Bow",
             "levelreq": "18",
@@ -3796,7 +3943,7 @@
             "tn": "https://cdn.discordapp.com/attachments/835848485566676992/836273079771463740/st12b.png"
         },
         "crystalstaff": {
-            "displayname": "Crystallised Staff",
+            "displayname": "Crystallized Staff",
             "levelreq": "18",
             "dropsfrom": "Worm Father",
             "exalted": "False",
@@ -3816,7 +3963,7 @@
             "tn": "https://cdn.discordapp.com/attachments/835848485566676992/836277356351848478/stut1.png"
         },
         "ecrystalstaff": {
-            "displayname": "Exalted Crystallised Staff",
+            "displayname": "Exalted Crystallized Staff",
             "levelreq": "18",
             "dropsfrom": "Worm Father",
             "exalted": "True",
@@ -4832,7 +4979,7 @@
             "tn": "https://cdn.discordapp.com/attachments/835848485566676992/837342509851738203/qt6b.png"
         },
         "cfang": {
-            "displayname": "Crystallised Fang Poison",
+            "displayname": "Crystallized Fang Poison",
             "levelreq": "20",
             "droploc": "Worm Father",
             "exalted": "False",
@@ -4844,7 +4991,7 @@
             "tn": "https://cdn.discordapp.com/attachments/835848485566676992/837344006504841216/at7.png"
         },
         "ecfang": {
-            "displayname": "Exalted Crystallised Fang Poison",
+            "displayname": "Exalted Crystallized Fang Poison",
             "levelreq": "20",
             "droploc": "Worm Father",
             "exalted": "True",

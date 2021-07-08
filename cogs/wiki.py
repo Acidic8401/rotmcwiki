@@ -33,7 +33,7 @@ class Wiki(commands.Cog):
         self.golem=["golem", "void", "voidgolem"]
         self.shatts=["shatters", "shatts", "theshatters"]
         self.onyx=["onyx", "onyxscastle", "castle", "oryx"]
-        self.citadel=["citadel", "cit", "omnipotent"]
+        self.citadel=["citadel", "cit", "omnipotent", "omnipotentscitadel"]
         #UT Armours
         self.crown=["theforgottencrown", "crown"]
         self.thood=["thood", "twih", "twilighthood"]
@@ -183,6 +183,8 @@ class Wiki(commands.Cog):
         self.ekendo=["ekendostick", "ekstick", "ekendo"]
         self.okat=["okat", "okatana", "onyxkat", "onyxkatana"]
         self.eokat=["eokat", "eokatana", "eonyxkat", "eonyxkatana"]
+        self.ckat=["cstick", "ckat", "carrotonastick", "carrotstick", "chunguskat", "chunguskatana"]
+        self.eckat=["ecstick", "eckat", "ecarrotonastick", "ecarrotstick", "echunguskat", "echunguskatana"]
         #UT Bows
         self.dbow=["dbow", "doombow", "db"]
         self.edbow=["edbow", "edoombow", "edb", "exdbow"]
@@ -719,6 +721,10 @@ class Wiki(commands.Cog):
             terms = "okat"
         elif terms in self.eokat:
             terms = "eokat"
+        elif terms in self.ckat:
+            terms="ckat"
+        elif terms in self.eckat:
+            terms="eckat"
         #UT Bows
         elif terms in self.dbow:
             terms = "dbow"
@@ -1156,7 +1162,7 @@ class Wiki(commands.Cog):
             em=embeds.armours(ctx, slot, classes, displayname, levelreq, dropsfrom, stats, gems, runes, essence, tn, exalted, colour)
             em.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
             await ctx.send(embed=em)
-        elif terms in ["dbow", "edbow", "dkat", "edkat", "kendo", "ekendo", "okat", "eokat", "cbow", "ecbow", "lbow", "elbow", "bbow", "ebbow", "obow", "eobow", "sdagger", "esdagger", "cdirk", "ecdirk", "ddagger", "eddagger", "gdagger", "egdagger", "odagger", "eodagger", "shovel", "eshovel", "cultstaff", "ecultstaff", "crystalstaff", "ecrystalstaff", "asteroid", "easteroid", "ostaff", "eostaff", "cutlass", "ecutlass", "dblade", "edblade", "gsword", "egsword", "tcleaver", "etcleaver", "osword", "eosword"]:
+        elif terms in ["dbow", "edbow", "dkat", "edkat", "kendo", "ekendo", "okat", "eokat", "ckat", "eckat", "cbow", "ecbow", "lbow", "elbow", "bbow", "ebbow", "obow", "eobow", "sdagger", "esdagger", "cdirk", "ecdirk", "ddagger", "eddagger", "gdagger", "egdagger", "odagger", "eodagger", "shovel", "eshovel", "cultstaff", "ecultstaff", "crystalstaff", "ecrystalstaff", "asteroid", "easteroid", "ostaff", "eostaff", "cutlass", "ecutlass", "dblade", "edblade", "gsword", "egsword", "tcleaver", "etcleaver", "osword", "eosword"]:
             with open('rotmc.json') as f:
                 f = json.load(f)
             data=f["items"][terms]
@@ -1256,10 +1262,10 @@ class Wiki(commands.Cog):
             paginator = Paginator(pages=self.get_pages())
             await paginator.start(ctx)
         elif terms == "dust":
-            em=embeds.dust()
+            em=embeds.dust(ctx)
             await ctx.send(embed=em)
         elif terms in ["elytras", "elytra"]:
-            em=embeds.elytrainfo()
+            em=embeds.elytrainfo(ctx)
             await ctx.send(embed=em)
         elif terms in ["dungs", "dung", "dungeon", "dungeons"]:
             em=embeds.dungeon(ctx)

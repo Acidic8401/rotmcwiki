@@ -12,6 +12,7 @@ import json
 from webserver import keep_alive
 from itertools import cycle
 import datetime, time
+from dislash import *
 load_dotenv()
 token=os.getenv("TOKEN")
 
@@ -22,9 +23,13 @@ def get_prefix(client, message):
     return prefixes[str(message.guild.id)]
 
 client=commands.Bot(command_prefix=get_prefix)
+slash = SlashClient(client)
 client.remove_command("help")
 status=cycle(['RotMC', 'Do ;wiki <itemname>'])
 
+@slash.command(description="Says Hello")
+async def hi(ctx):
+    await ctx.send("Hello!")
 
 @client.event
 async def on_ready():

@@ -1,15 +1,72 @@
 import discord 
+def abilities_help(ctx):
+    embed=discord.Embed(
+        title="**Abilities help**",
+        description="There are `9` different types of abilities with the corresponding class in brackets next to it: \n - **Helmet** (Warrior) \n - **Shield** (Knight) \n - **Kunai** (Samurai) \n - **Orb** (Battlemage) \n - **Skull** (Necromancer) \n - **Trap** (Huntress) \n - **Star** (Ninja) \n - **Cloak** (Rogue) \n - **Poison** (Assassin)",
+        color=ctx.author.color
+    )
+    embed.add_field(
+        name="**Extra info**",
+        value="For tiered abilities you should just name the type of ability then add `t7` to the end or beginning for a tier 7 ability for example `;wiki orb t7`. There are up to 11 tiers of abilities. There are also untiered items which do not follow normal naming conventions. To find more about these you should just search the name of the item."
+    )
+    embed.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+    return embed
+def armour_help(ctx):
+    embed=discord.Embed(
+        title="**Armour help**",
+        description="There are `3` different types of armour: \n - **Heavy** \n - **Leather** \n - **Robe**",
+        color=ctx.author.color
+    )
+    embed.add_field(
+        name="**Extra info**",
+        value="For tiered items you should just name the type of armour then add `t7` to the end or beginning for a tier 7 item for example `;wiki robe t7`. There are up to 11 tiers of armours. There are also untiered items which do not follow normal naming conventions. To find more about these you should just search the name of the item."
+    )
+    embed.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+    return embed
+def weapons_help(ctx):
+    embed=discord.Embed(
+        title="**Weapon help**",
+        description="There are `5` different types of weapons: \n - **Swords** \n - **Staves** \n - **Katanas** \n - **Bows** \n - **Daggers**",
+        color=ctx.author.color
+    )
+    embed.add_field(
+        name="**Extra info**",
+        value="For tiered weapons you should just name the type of weapon then add `t7` to the end or beginning for a tier 7 ability for example `;wiki sword t7`. There are up to 11 tiers of weapons. There are also untiered items which do not follow normal naming conventions. To find more about these you should just search the name of the item."
+    )
+    embed.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+    return embed
+def gems_help(ctx):
+    embed=discord.Embed(
+        title="**Gems help**",
+        description="There are `8` different types of gems with 1 type per stat and `5` for each type ranging from level 1 to 5. For more information you should use `;wiki gems`",
+        color=ctx.author.color
+    )
+    embed.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+    return embed
+def help(ctx):
+    embed=discord.Embed(
+        title="**Bot info**",
+        description="This bot has info regarding every equipable item in RotMC. Including armour, elytras, weapons and abilities. The bot also has information regarding all current dungeons and classes. If you would like more info regarding this please use the select menu down below",
+        color=ctx.author.color
+    )
+    embed.add_field(
+        name="**How to use the bot**",
+        value="To use this bot you should use the command `;wiki <search term>` the bot is not case sensitive nor does it matter where you add spaces. **All exalted items just use the normal item names with an `e` in front. For example you can use `demon blade` or `e demon blade`**"
+    )
+    embed.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
+    return embed
 def dungeon(ctx):
     embed=discord.Embed(
         title="**Dungeon info**",
-        description="There are currently `15` dungeons in RotMC. The names of these are listed below. Each dungeon requires a certain amount of 'Tier Points' to enter. For tiered items this number will always match the appropriate tier e.g. a tier 7 chestpiece has 7 Tier Points. The higher the amount of Tier Points required the more difficult the dungeon is. \n For more information please do `;wiki <dungeon name>`",
+        description="There are currently `16` dungeons in RotMC. The names of these are listed below. Each dungeon requires a certain amount of 'Tier Points' to enter. For tiered items this number will always match the appropriate tier e.g. a tier 7 chestpiece has 7 Tier Points. The higher the amount of Tier Points required the more difficult the dungeon is. \n For more information please do `;wiki <dungeon name>`",
         color=ctx.author.color
     )
     embed.add_field(
         name="**Dungeon list**",
-        value="`1.` Pirate Cove \n `2.` Enchanted Forest \n `3.` Goblin's Lair \n `4.` Abyss of Demons \n `5.` Undead Lair \n `6.` Treasure Cave \n `7.` Kraken's Fortress \n `8.` Davy Jones' Locker \n `9.` Fungal Cavern \n `10.` Onyx's Castle (Part 1) \n `11.` Cultist Hideout \n `12.` Omnipotent's Citadel \n `13.` Void \n `14.` The Shatters \n `15.` Onyx's Castle (Part 2)",
+        value="`1.` Pirate Cove \n `2.` Enchanted Forest \n `3.` Goblin Lair \n `4.` Abyss of Demons \n `5.` Undead Lair \n `6.` Treasure Cave \n `7.` Kraken's Fortress \n `8.` Davy Jones' Locker \n `9.` Fungal Cavern \n `10.` Omnipotent's Citadel \n `11.` Onyx's Castle (Part 1) \n `12.` Cultist Hideout \n `13.` Chronos \n `14.` Void \n `15.` The Shatters \n `16.` Onyx's Castle (Part 2)",
         inline=True
     )
+    embed.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
     return embed
 def char(ctx, weapon, armour, type, atk, spd, bhp, health, eva, vit, defence, crithit, critdam, tn, name):
     embed=discord.Embed(
@@ -148,7 +205,7 @@ def elytras(defense, attack, speed, dodge, health, gem, name, colour, tn):
     embed.set_thumbnail(url=tn)
     embed.color=int(colour)
     return embed
-def dust():
+def dust(ctx):
     embed=discord.Embed(
         title="**Dust info**",
         description = "Dust is used to increase the success rate of gems. There are 5 different kinds of dust."
@@ -159,8 +216,9 @@ def dust():
     )
     embed.color=discord.Color.random()
     embed.set_thumbnail(url="https://cdn.discordapp.com/emojis/838121110901227560.png?v=1")
+    embed.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
     return embed
-def elytrainfo():
+def elytrainfo(ctx):
     embed=discord.Embed(
         title="**Elytra Info**",
         description="Elytras can be obtained through crates. \n If you hold shift while looking up until fire particles appear at your feet you will launch yourself into the air. This can be used to get extra speed in the realm. **ELYTRA FLIGHT IS BLOCKED IN DUNGEONS**",
@@ -171,9 +229,5 @@ def elytrainfo():
         name="**Elytra Aliases**",
         value="For more info you can use `;wiki <elytra tier>elytra` \n Make sure there is no space between the elytra tier and the word elytra"
     )
+    embed.set_author(name=str(ctx.author.display_name), icon_url=(str(ctx.author.avatar_url)))
     return embed
-def guildinfo():
-    embed=discord.Embed(
-        title="**Guild info**",
-        description="Guilds can be upgraded using fame."
-    )
